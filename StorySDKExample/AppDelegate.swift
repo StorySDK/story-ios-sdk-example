@@ -29,7 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
     func configureStorySdk() {
         StorySDK.shared.configuration = SRConfiguration(
             language: "es",
@@ -37,4 +36,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
     }
 }
-

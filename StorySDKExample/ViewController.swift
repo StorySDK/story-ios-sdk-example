@@ -40,16 +40,7 @@ class ViewController: UIViewController {
     }
     
     @objc func fetchData() {
-        StorySDK.shared.getApp { [weak self] result in
-            switch result {
-            case .success(let app): self?.reloadWidget(app)
-            case .failure(let error): self?.presentError(error)
-            }
-        }
-    }
-    
-    func reloadWidget(_ app: StoryApp) {
-        widget.load(app: app)
+        widget.load()
     }
     
     func presentError(_ error: Error) {
