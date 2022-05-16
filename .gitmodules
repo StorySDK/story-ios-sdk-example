@@ -1,0 +1,3 @@
+[submodule "StorySDK"]
+	path = StorySDK
+	url = git@github.com:StorySDK/story-ios-sdk.git
