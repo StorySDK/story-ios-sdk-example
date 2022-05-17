@@ -31,7 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func configureStorySdk() {
         StorySDK.shared.configuration = SRConfiguration(
-            language: "es",
             sdkId: "2b69480e-2538-4192-baff-5eca33558355"
         )
     }

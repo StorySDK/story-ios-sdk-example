@@ -13,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let vc = ViewController(nibName: nil, bundle: nil)
+        let vc = RootViewController()
         let nc = UINavigationController(rootViewController: vc)
         let window = UIWindow(frame: windowScene.screen.bounds)
         window.rootViewController = nc
