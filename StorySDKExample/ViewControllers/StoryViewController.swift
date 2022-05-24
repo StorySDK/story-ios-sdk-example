@@ -24,14 +24,7 @@ extension StoryViewController: SRStoryWidgetDelegate {
     }
     
     func onWidgetGroupPresent(_ group: StoryGroup, widget: SRStoryWidget) {
-        StorySDK.shared.getStories(group) { [weak self] result in
-            switch result {
-            case .success(let stories):
-                let vc = SRStoriesViewController(stories, for: group, activeOnly: false)
-                self?.present(vc, animated: true)
-            case .failure(let error):
-                self?.presentError(error)
-            }
-        }
+        let vc = SRStoriesViewController(group)
+        present(vc, animated: true)
     }
 }
