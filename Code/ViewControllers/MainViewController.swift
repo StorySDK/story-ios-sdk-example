@@ -1,18 +1,22 @@
 //
-//  ManualViewController.swift
-//  StorySDKExample
+//  MainViewController.swift
+//  StoriesPlayer
 //
-//  Created by Aleksei Cherepanov on 11.05.2022.
+//  Created by Ingvarr Alef on 08.04.2023.
 //
+
 
 import UIKit
 import StorySDK
 
-final class ManualViewController: UIViewController {
+class MainViewController: UIViewController, SRStoryWidgetDelegate {
+    private var model: StoriesPlayerModel?
+    
     let widget = SRStoryWidget()
     
-    init() {
+    init(model: StoriesPlayerModel) {
         super.init(nibName: nil, bundle: nil)
+        self.model = model
     }
     
     @available(*, unavailable)
@@ -20,22 +24,22 @@ final class ManualViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        setupLayout()
-        addEvents()
-        fetchData()
-        tabBarItem = UITabBarItem(
-            title: "Manual",
-            image: .init(systemName: "pencil"),
-            tag: 0
-        )
+    func onWidgetErrorReceived(_ error: Error, widget: SRStoryWidget) {
+        print(error)
+    }
+    
+    func onWidgetGroupPresent(index: Int, groups: [SRStoryGroup], widget: SRStoryWidget) {
+        guard groups.count > index else { return }
+        let group = groups[index]
+        
+        let vc = SRStoriesViewController(group)
+        present(vc, animated: true)
     }
     
     func setupLayout() {
-        view.addSubview(widget)
         widget.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(widget)
+        
         NSLayoutConstraint.activate([
             widget.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             widget.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
@@ -43,8 +47,17 @@ final class ManualViewController: UIViewController {
         ])
     }
     
-    func addEvents() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .black
+        
+        setupLayout()
+        
         widget.delegate = self
+        
+        model?.setup(widget: widget)
+        reloadApp()
+        
         navigationItem.rightBarButtonItem = .init(
             image: .init(systemName: "arrow.counterclockwise"),
             style: .plain,
@@ -54,17 +67,10 @@ final class ManualViewController: UIViewController {
     }
     
     @objc func fetchData() {
-        widget.load()
-    }
-}
-
-extension ManualViewController: SRStoryWidgetDelegate {
-    func onWidgetErrorReceived(_ error: Error, widget: SRStoryWidget) {
-        presentError(error)
+        model?.fetchData()
     }
     
-    func onWidgetGroupPresent(_ group: StoryGroup, widget: SRStoryWidget) {
-        let vc = SRStoriesViewController(group)
-        present(vc, animated: true)
+    @objc func reloadApp() {
+        model?.reloadApp()
     }
 }
