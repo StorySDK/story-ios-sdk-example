@@ -1,23 +1,16 @@
 {
-  "pins" : [
-    {
-      "identity" : "snapkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SnapKit/SnapKit.git",
-      "state" : {
-        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
-        "version" : "5.6.0"
+  "object": {
+    "pins": [
+      {
+        "package": "SnapKit",
+        "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
+        "state": {
+          "branch": null,
+          "revision": "f222cbdf325885926566172f6f5f06af95473158",
+          "version": "5.6.0"
+        }
       }
-    },
-    {
-      "identity" : "story-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/StorySDK/story-ios-sdk.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "72171223131d75dd63e864b2e27ef4821dd30991"
-      }
-    }
-  ],
-  "version" : 2
+    ]
+  },
+  "version": 1
 }

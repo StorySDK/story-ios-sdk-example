@@ -36,6 +36,10 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         present(vc, animated: true)
     }
     
+    func onWidgetGroupsLoaded(groups: [SRStoryGroup]) {
+        
+    }
+    
     func setupLayout() {
         widget.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(widget)
@@ -49,7 +53,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .systemBackground
         
         setupLayout()
         

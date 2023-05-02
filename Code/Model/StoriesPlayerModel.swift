@@ -21,6 +21,11 @@ class StoriesPlayerModel {
         
         StorySDK.shared.configuration = SRConfiguration(sdkId: apiKey)
         StorySDK.shared.configuration.language = "en"
+        StorySDK.shared.configuration.needShowTitle = true
+    }
+    
+    func openAsOnboarding(groupId: String) {
+        widget?.openAsOnboarding(groupId: groupId)
     }
     
     func fetchData() {

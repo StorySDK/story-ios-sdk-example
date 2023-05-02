@@ -10,13 +10,34 @@
 		3775361422234238005EE5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775361322234238005EE5FE /* AppDelegate.swift */; };
 		3775361B22234238005EE5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3775361A22234238005EE5FE /* Assets.xcassets */; };
 		3775361E22234238005EE5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3775361C22234238005EE5FE /* LaunchScreen.storyboard */; };
-		8D295E7C29F5E1EF0008C3F8 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8D295E7B29F5E1EF0008C3F8 /* StorySDK */; };
+		3775362922234238005EE5FE /* StoriesPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775362822234238005EE5FE /* StoriesPlayerTests.swift */; };
+		3775363422234239005EE5FE /* StoriesPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775363322234239005EE5FE /* StoriesPlayerUITests.swift */; };
 		8D356C7929E16A1800B08643 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D356C7829E16A1800B08643 /* MainViewController.swift */; };
+		8D356C8029E16B9900B08643 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8D356C7F29E16B9900B08643 /* StorySDK */; };
 		8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */; };
 		8D84A6CE29F1DA3A0024C58D /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */; };
 		8D84A6CF29F1DA3A0024C58D /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */; };
+		8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764129FF075C007CC68C /* UIView+Extension.swift */; };
+		8DB3764429FF2ADA007CC68C /* GroupPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */; };
 		8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFCFC6029F1DF2E0033F4D1 /* SnapKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3775362522234238005EE5FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3775360822234238005EE5FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3775360F22234238005EE5FE;
+			remoteInfo = iOSTemplate;
+		};
+		3775363022234239005EE5FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3775360822234238005EE5FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3775360F22234238005EE5FE;
+			remoteInfo = iOSTemplate;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3775361022234238005EE5FE /* StoriesPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoriesPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +45,19 @@
 		3775361A22234238005EE5FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3775361D22234238005EE5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3775361F22234238005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3775362422234238005EE5FE /* StoriesPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriesPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3775362822234238005EE5FE /* StoriesPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPlayerTests.swift; sourceTree = "<group>"; };
+		3775362A22234238005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3775362F22234239005EE5FE /* StoriesPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriesPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3775363322234239005EE5FE /* StoriesPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPlayerUITests.swift; sourceTree = "<group>"; };
+		3775363522234239005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D356C7829E16A1800B08643 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8D356C7D29E16B4B00B08643 /* story-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "story-ios-sdk"; path = "../story-ios-sdk"; sourceTree = "<group>"; };
 		8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerModel.swift; sourceTree = "<group>"; };
 		8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
 		8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		8DB3764129FF075C007CC68C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,8 +65,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D356C8029E16B9900B08643 /* StorySDK in Frameworks */,
 				8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */,
-				8D295E7C29F5E1EF0008C3F8 /* StorySDK in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3775362122234238005EE5FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3775362C22234239005EE5FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +90,10 @@
 		3775360722234238005EE5FE = {
 			isa = PBXGroup;
 			children = (
+				8D356C7C29E16B4B00B08643 /* Packages */,
 				3775361222234238005EE5FE /* Code */,
+				3775362722234238005EE5FE /* StoriesPlayerTests */,
+				3775363222234239005EE5FE /* StoriesPlayerUITests */,
 				3775361122234238005EE5FE /* Products */,
 				8D356C7E29E16B9900B08643 /* Frameworks */,
 			);
@@ -56,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				3775361022234238005EE5FE /* StoriesPlayer.app */,
+				3775362422234238005EE5FE /* StoriesPlayerTests.xctest */,
+				3775362F22234239005EE5FE /* StoriesPlayerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +112,7 @@
 		3775361222234238005EE5FE /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				8DB3764029FF073B007CC68C /* Extension */,
 				8D84A6C929F1DA2D0024C58D /* Model */,
 				8D356C7729E169F900B08643 /* ViewControllers */,
 				3775361322234238005EE5FE /* AppDelegate.swift */,
@@ -73,14 +123,41 @@
 			path = Code;
 			sourceTree = "<group>";
 		};
+		3775362722234238005EE5FE /* StoriesPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3775362822234238005EE5FE /* StoriesPlayerTests.swift */,
+				3775362A22234238005EE5FE /* Info.plist */,
+			);
+			path = StoriesPlayerTests;
+			sourceTree = "<group>";
+		};
+		3775363222234239005EE5FE /* StoriesPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3775363322234239005EE5FE /* StoriesPlayerUITests.swift */,
+				3775363522234239005EE5FE /* Info.plist */,
+			);
+			path = StoriesPlayerUITests;
+			sourceTree = "<group>";
+		};
 		8D356C7729E169F900B08643 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */,
 				8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */,
 				8D356C7829E16A1800B08643 /* MainViewController.swift */,
+				8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8D356C7C29E16B4B00B08643 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				8D356C7D29E16B4B00B08643 /* story-ios-sdk */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		8D356C7E29E16B9900B08643 /* Frameworks */ = {
@@ -96,6 +173,14 @@
 				8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8DB3764029FF073B007CC68C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DB3764129FF075C007CC68C /* UIView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,12 +200,48 @@
 			);
 			name = StoriesPlayer;
 			packageProductDependencies = (
+				8D356C7F29E16B9900B08643 /* StorySDK */,
 				8DFCFC6029F1DF2E0033F4D1 /* SnapKit */,
-				8D295E7B29F5E1EF0008C3F8 /* StorySDK */,
 			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* StoriesPlayer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		3775362322234238005EE5FE /* StoriesPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3775363B22234239005EE5FE /* Build configuration list for PBXNativeTarget "StoriesPlayerTests" */;
+			buildPhases = (
+				3775362022234238005EE5FE /* Sources */,
+				3775362122234238005EE5FE /* Frameworks */,
+				3775362222234238005EE5FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3775362622234238005EE5FE /* PBXTargetDependency */,
+			);
+			name = StoriesPlayerTests;
+			productName = iOSTemplateTests;
+			productReference = 3775362422234238005EE5FE /* StoriesPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3775362E22234239005EE5FE /* StoriesPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3775363E22234239005EE5FE /* Build configuration list for PBXNativeTarget "StoriesPlayerUITests" */;
+			buildPhases = (
+				3775362B22234239005EE5FE /* Sources */,
+				3775362C22234239005EE5FE /* Frameworks */,
+				3775362D22234239005EE5FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3775363122234239005EE5FE /* PBXTargetDependency */,
+			);
+			name = StoriesPlayerUITests;
+			productName = iOSTemplateUITests;
+			productReference = 3775362F22234239005EE5FE /* StoriesPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -133,6 +254,15 @@
 				TargetAttributes = {
 					3775360F22234238005EE5FE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = "";
+					};
+					3775362322234238005EE5FE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3775360F22234238005EE5FE;
+					};
+					3775362E22234239005EE5FE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3775360F22234238005EE5FE;
 					};
 				};
 			};
@@ -147,13 +277,14 @@
 			mainGroup = 3775360722234238005EE5FE;
 			packageReferences = (
 				8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				8D295E7A29F5E1EF0008C3F8 /* XCRemoteSwiftPackageReference "story-ios-sdk" */,
 			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3775360F22234238005EE5FE /* StoriesPlayer */,
+				3775362322234238005EE5FE /* StoriesPlayerTests */,
+				3775362E22234239005EE5FE /* StoriesPlayerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -168,6 +299,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3775362222234238005EE5FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3775362D22234239005EE5FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -175,15 +320,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */,
 				8D356C7929E16A1800B08643 /* MainViewController.swift in Sources */,
 				8D84A6CF29F1DA3A0024C58D /* ChooseViewController.swift in Sources */,
 				8D84A6CE29F1DA3A0024C58D /* ChooseView.swift in Sources */,
 				8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */,
+				8DB3764429FF2ADA007CC68C /* GroupPickerViewController.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3775362022234238005EE5FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3775362922234238005EE5FE /* StoriesPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3775362B22234239005EE5FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3775363422234239005EE5FE /* StoriesPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3775362622234238005EE5FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3775360F22234238005EE5FE /* StoriesPlayer */;
+			targetProxy = 3775362522234238005EE5FE /* PBXContainerItemProxy */;
+		};
+		3775363122234239005EE5FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3775360F22234238005EE5FE /* StoriesPlayer */;
+			targetProxy = 3775363022234239005EE5FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3775361C22234238005EE5FE /* LaunchScreen.storyboard */ = {
@@ -318,7 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -338,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -350,6 +526,84 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3775363C22234239005EE5FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoriesPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSTemplateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoriesPlayer.app/StoriesPlayer";
+			};
+			name = Debug;
+		};
+		3775363D22234239005EE5FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoriesPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSTemplateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoriesPlayer.app/StoriesPlayer";
+			};
+			name = Release;
+		};
+		3775363F22234239005EE5FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoriesPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSTemplateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSTemplate;
+			};
+			name = Debug;
+		};
+		3775364022234239005EE5FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StoriesPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.iOSTemplateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iOSTemplate;
 			};
 			name = Release;
 		};
@@ -374,17 +628,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3775363B22234239005EE5FE /* Build configuration list for PBXNativeTarget "StoriesPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3775363C22234239005EE5FE /* Debug */,
+				3775363D22234239005EE5FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3775363E22234239005EE5FE /* Build configuration list for PBXNativeTarget "StoriesPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3775363F22234239005EE5FE /* Debug */,
+				3775364022234239005EE5FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8D295E7A29F5E1EF0008C3F8 /* XCRemoteSwiftPackageReference "story-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/StorySDK/story-ios-sdk.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -396,9 +660,8 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D295E7B29F5E1EF0008C3F8 /* StorySDK */ = {
+		8D356C7F29E16B9900B08643 /* StorySDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8D295E7A29F5E1EF0008C3F8 /* XCRemoteSwiftPackageReference "story-ios-sdk" */;
 			productName = StorySDK;
 		};
 		8DFCFC6029F1DF2E0033F4D1 /* SnapKit */ = {
