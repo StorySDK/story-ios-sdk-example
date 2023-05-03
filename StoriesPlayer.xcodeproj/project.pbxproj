@@ -10,15 +10,16 @@
 		3775361422234238005EE5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775361322234238005EE5FE /* AppDelegate.swift */; };
 		3775361B22234238005EE5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3775361A22234238005EE5FE /* Assets.xcassets */; };
 		3775361E22234238005EE5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3775361C22234238005EE5FE /* LaunchScreen.storyboard */; };
-		3775362922234238005EE5FE /* StoriesPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775362822234238005EE5FE /* StoriesPlayerTests.swift */; };
-		3775363422234239005EE5FE /* StoriesPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775363322234239005EE5FE /* StoriesPlayerUITests.swift */; };
 		8D356C7929E16A1800B08643 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D356C7829E16A1800B08643 /* MainViewController.swift */; };
-		8D356C8029E16B9900B08643 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8D356C7F29E16B9900B08643 /* StorySDK */; };
 		8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */; };
 		8D84A6CE29F1DA3A0024C58D /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */; };
 		8D84A6CF29F1DA3A0024C58D /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */; };
 		8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764129FF075C007CC68C /* UIView+Extension.swift */; };
 		8DB3764429FF2ADA007CC68C /* GroupPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */; };
+		8DB3764C2A02F0D1007CC68C /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB3764B2A02F0D1007CC68C /* StorySDK */; };
+		8DB376502A02F51F007CC68C /* StoriesPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764E2A02F51F007CC68C /* StoriesPlayerTests.swift */; };
+		8DB376552A02F581007CC68C /* StoriesPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB376532A02F581007CC68C /* StoriesPlayerUITests.swift */; };
+		8DB376562A02F581007CC68C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DB376542A02F581007CC68C /* Info.plist */; };
 		8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFCFC6029F1DF2E0033F4D1 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -46,18 +47,17 @@
 		3775361D22234238005EE5FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3775361F22234238005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3775362422234238005EE5FE /* StoriesPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriesPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3775362822234238005EE5FE /* StoriesPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPlayerTests.swift; sourceTree = "<group>"; };
-		3775362A22234238005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3775362F22234239005EE5FE /* StoriesPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoriesPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3775363322234239005EE5FE /* StoriesPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesPlayerUITests.swift; sourceTree = "<group>"; };
-		3775363522234239005EE5FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D356C7829E16A1800B08643 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		8D356C7D29E16B4B00B08643 /* story-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "story-ios-sdk"; path = "../story-ios-sdk"; sourceTree = "<group>"; };
 		8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerModel.swift; sourceTree = "<group>"; };
 		8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
 		8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		8DB3764129FF075C007CC68C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPickerViewController.swift; sourceTree = "<group>"; };
+		8DB3764E2A02F51F007CC68C /* StoriesPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerTests.swift; sourceTree = "<group>"; };
+		8DB3764F2A02F51F007CC68C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DB376532A02F581007CC68C /* StoriesPlayerUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerUITests.swift; sourceTree = "<group>"; };
+		8DB376542A02F581007CC68C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D356C8029E16B9900B08643 /* StorySDK in Frameworks */,
 				8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */,
+				8DB3764C2A02F0D1007CC68C /* StorySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +92,8 @@
 			children = (
 				8D356C7C29E16B4B00B08643 /* Packages */,
 				3775361222234238005EE5FE /* Code */,
-				3775362722234238005EE5FE /* StoriesPlayerTests */,
-				3775363222234239005EE5FE /* StoriesPlayerUITests */,
+				8DB3764D2A02F51F007CC68C /* StoriesPlayerTests */,
+				8DB376522A02F581007CC68C /* StoriesPlayerUITests */,
 				3775361122234238005EE5FE /* Products */,
 				8D356C7E29E16B9900B08643 /* Frameworks */,
 			);
@@ -123,24 +123,6 @@
 			path = Code;
 			sourceTree = "<group>";
 		};
-		3775362722234238005EE5FE /* StoriesPlayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				3775362822234238005EE5FE /* StoriesPlayerTests.swift */,
-				3775362A22234238005EE5FE /* Info.plist */,
-			);
-			path = StoriesPlayerTests;
-			sourceTree = "<group>";
-		};
-		3775363222234239005EE5FE /* StoriesPlayerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3775363322234239005EE5FE /* StoriesPlayerUITests.swift */,
-				3775363522234239005EE5FE /* Info.plist */,
-			);
-			path = StoriesPlayerUITests;
-			sourceTree = "<group>";
-		};
 		8D356C7729E169F900B08643 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +137,6 @@
 		8D356C7C29E16B4B00B08643 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				8D356C7D29E16B4B00B08643 /* story-ios-sdk */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -183,6 +164,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8DB3764D2A02F51F007CC68C /* StoriesPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB3764E2A02F51F007CC68C /* StoriesPlayerTests.swift */,
+				8DB3764F2A02F51F007CC68C /* Info.plist */,
+			);
+			path = StoriesPlayerTests;
+			sourceTree = "<group>";
+		};
+		8DB376522A02F581007CC68C /* StoriesPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8DB376532A02F581007CC68C /* StoriesPlayerUITests.swift */,
+				8DB376542A02F581007CC68C /* Info.plist */,
+			);
+			path = StoriesPlayerUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,8 +199,8 @@
 			);
 			name = StoriesPlayer;
 			packageProductDependencies = (
-				8D356C7F29E16B9900B08643 /* StorySDK */,
 				8DFCFC6029F1DF2E0033F4D1 /* SnapKit */,
+				8DB3764B2A02F0D1007CC68C /* StorySDK */,
 			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* StoriesPlayer.app */;
@@ -250,7 +249,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					3775360F22234238005EE5FE = {
 						CreatedOnToolsVersion = 10.1;
@@ -277,6 +276,7 @@
 			mainGroup = 3775360722234238005EE5FE;
 			packageReferences = (
 				8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8DB3764A2A02F0D1007CC68C /* XCRemoteSwiftPackageReference "story-ios-sdk" */,
 			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
@@ -310,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB376562A02F581007CC68C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3775362922234238005EE5FE /* StoriesPlayerTests.swift in Sources */,
+				8DB376502A02F51F007CC68C /* StoriesPlayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3775363422234239005EE5FE /* StoriesPlayerUITests.swift in Sources */,
+				8DB376552A02F581007CC68C /* StoriesPlayerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +400,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -460,6 +462,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -504,7 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.softeam.storiesplayer.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -524,7 +527,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.softeam.storiesplayer.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -649,6 +652,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8DB3764A2A02F0D1007CC68C /* XCRemoteSwiftPackageReference "story-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StorySDK/story-ios-sdk.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -660,8 +671,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8D356C7F29E16B9900B08643 /* StorySDK */ = {
+		8DB3764B2A02F0D1007CC68C /* StorySDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 8DB3764A2A02F0D1007CC68C /* XCRemoteSwiftPackageReference "story-ios-sdk" */;
 			productName = StorySDK;
 		};
 		8DFCFC6029F1DF2E0033F4D1 /* SnapKit */ = {

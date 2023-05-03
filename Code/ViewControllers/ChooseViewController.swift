@@ -13,6 +13,7 @@ protocol ChooseViewControllerDelegate: AnyObject {
     func setupAPIKey(apiKey: String)
     func selectGroup()
     func openAsOnboarding()
+    func openApp()
 }
 
 final class ChooseViewController: UIViewController {

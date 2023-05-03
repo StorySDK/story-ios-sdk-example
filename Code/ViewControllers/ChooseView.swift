@@ -29,8 +29,7 @@ final class ChooseView: UIView {
     private lazy var apiKeyTextField: UITextField = {
         let tf = UITextField(frame: .zero)
         tf.backgroundColor = .lightGray
-        //tf.placeholder = "API Key"
-        tf.text = "59926711-1f1b-4f08-bcbb-c7d7640756e5"
+        tf.placeholder = "API Key"
         
         return tf
     }()
@@ -133,7 +132,6 @@ final class ChooseView: UIView {
             $0.leading.equalTo(apiKeyTextField.snp.leading)
             $0.trailing.equalTo(selectGroupButton.snp.leading).inset(-15)
             $0.height.equalTo(44)
-            //$0.centerX.equalToSuperview()
             $0.bottom.equalTo(openGroupButton.snp.top).offset(-22)
         }
         
