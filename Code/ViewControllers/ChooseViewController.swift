@@ -87,6 +87,8 @@ extension ChooseViewController: ChooseViewControllerDelegate {
     }
     
     func openAsOnboarding() {
+        guard (groups?.count ?? 0) > selectedGroupIndex else { return }
+        
         if let group = groups?[selectedGroupIndex] {
             model?.openAsOnboarding(groupId: group.id)
         }
