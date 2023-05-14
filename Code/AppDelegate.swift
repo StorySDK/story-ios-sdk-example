@@ -11,12 +11,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = .systemGreen
-        window?.rootViewController = UINavigationController(rootViewController: ChooseViewController())
+        window?.backgroundColor = .systemBackground
+        window?.rootViewController = UINavigationController(rootViewController: MainViewController(model: StoriesPlayerModel(apiKey: AppConfig.defaultAppAPIKey)))
         window?.makeKeyAndVisible()
         
         return true

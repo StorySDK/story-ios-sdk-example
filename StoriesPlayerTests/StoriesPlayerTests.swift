@@ -10,7 +10,7 @@ import StorySDK
 @testable import StoriesPlayer
 
 class StoriesPlayerTests: XCTestCase, SRStoryWidgetDelegate {
-    private let apiKey = "f32922c1-64e6-4ad4-ba5e-520ee77368c4"
+    private let apiKey = AppConfig.defaultAppAPIKey
     private let storyWidget = SRStoryWidget()
     private var expectation: XCTestExpectation?
     

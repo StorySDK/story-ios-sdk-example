@@ -10,16 +10,15 @@ import UIKit
 import StorySDK
 
 protocol ChooseViewControllerDelegate: AnyObject {
-    func setupAPIKey(apiKey: String)
     func selectGroup()
     func openAsOnboarding()
-    func openApp()
+    func apply(apiKey: String)
 }
 
 final class ChooseViewController: UIViewController {
     private lazy var customView: ChooseView = ChooseView(frame: CGRect.zero)
     
-    private var model: StoriesPlayerModel?
+    private weak var model: StoriesPlayerModel?
     private let storyWidget = SRStoryWidget()
     
     private var groups: [SRStoryGroup]?
@@ -35,8 +34,9 @@ final class ChooseViewController: UIViewController {
         }
     }
     
-    init() {
+    init(model: StoriesPlayerModel? = nil) {
         super.init(nibName: nil, bundle: nil)
+        self.model = model
     }
     
     @available(*, unavailable)
@@ -53,8 +53,9 @@ final class ChooseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemBackground
         
+        customView.apiKeyText = model?.apiKey
         customView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -62,14 +63,6 @@ final class ChooseViewController: UIViewController {
 }
 
 extension ChooseViewController: ChooseViewControllerDelegate {
-    func setupAPIKey(apiKey: String) {
-        model = StoriesPlayerModel(apiKey: apiKey)
-        storyWidget.delegate = self
-        
-        model?.setup(widget: storyWidget)
-        model?.reloadApp()
-    }
-    
     func selectGroup() {
         let vc = GroupPickerViewController(model: groups?.compactMap { String("\($0.title) - \($0.id)" )} )
         vc.preferredContentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 3)
@@ -94,10 +87,9 @@ extension ChooseViewController: ChooseViewControllerDelegate {
         }
     }
     
-    func openApp() {
-        guard let model = model else { return }
-        navigationController?.pushViewController(MainViewController(model: model),
-                                                         animated: true)
+    func apply(apiKey: String) {
+        model?.apiKey = apiKey
+        dismiss(animated: true)
     }
 }
 

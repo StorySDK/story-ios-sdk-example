@@ -17,9 +17,15 @@ final class ChooseView: UIView {
         }
     }
     
+    var apiKeyText: String? {
+        didSet {
+            apiKeyTextField.text = apiKeyText
+        }
+    }
+    
     private lazy var apiKeyLabel: UILabel = {
         let lbl = UILabel(frame: .zero)
-        lbl.textColor = .white
+        lbl.textColor = .label
         lbl.text = "SDK Token"
         lbl.textAlignment = .left
         
@@ -28,7 +34,7 @@ final class ChooseView: UIView {
     
     private lazy var apiKeyTextField: UITextField = {
         let tf = UITextField(frame: .zero)
-        tf.backgroundColor = .lightGray
+        tf.backgroundColor = .secondarySystemBackground
         tf.placeholder = "API Key"
         
         return tf
@@ -36,7 +42,7 @@ final class ChooseView: UIView {
     
     private lazy var groupIdLabel: UILabel = {
         let lbl = UILabel(frame: .zero)
-        lbl.textColor = .white
+        lbl.textColor = .label
         lbl.text = "Group ID"
         lbl.textAlignment = .left
         
@@ -45,26 +51,17 @@ final class ChooseView: UIView {
     
     private lazy var groupIdTextField: UITextField = {
         let tf = UITextField(frame: .zero)
-        tf.backgroundColor = .lightGray
+        tf.backgroundColor = .secondarySystemBackground
         tf.placeholder = "Group ID"
         tf.isEnabled = false
         
         return tf
     }()
     
-    private lazy var chooseButton: UIButton = {
-        let btn = UIButton(type: .system)
-        btn.setTitle("Setup", for: .normal)
-        btn.backgroundColor = .white
-        btn.addTarget(self, action: #selector(onChoose), for: .touchUpInside)
-        
-        return btn
-    }()
-    
     private lazy var selectGroupButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("Select", for: .normal)
-        btn.backgroundColor = .white
+        btn.backgroundColor = .tertiarySystemFill
         btn.addTarget(self, action: #selector(onSelect), for: .touchUpInside)
         
         return btn
@@ -73,7 +70,7 @@ final class ChooseView: UIView {
     private lazy var openGroupButton: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("Open as onboarding", for: .normal)
-        btn.backgroundColor = .white
+        btn.backgroundColor = .tertiarySystemFill
         btn.addTarget(self, action: #selector(onOpen), for: .touchUpInside)
         
         return btn
@@ -81,9 +78,9 @@ final class ChooseView: UIView {
     
     private lazy var showAllButton: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("Show App", for: .normal)
-        btn.backgroundColor = .white
-        btn.addTarget(self, action: #selector(onShow), for: .touchUpInside)
+        btn.setTitle("Apply", for: .normal)
+        btn.backgroundColor = .tertiarySystemFill
+        btn.addTarget(self, action: #selector(onApply), for: .touchUpInside)
         
         return btn
     }()
@@ -93,7 +90,6 @@ final class ChooseView: UIView {
         
         addMultipleSubviews(with: [apiKeyLabel,
                                    apiKeyTextField,
-                                   chooseButton,
                                    groupIdLabel,
                                    groupIdTextField,
                                    selectGroupButton,
@@ -112,13 +108,6 @@ final class ChooseView: UIView {
             $0.height.equalTo(44)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(40)
-        }
-        
-        chooseButton.snp.makeConstraints {
-            $0.width.equalTo(200)
-            $0.height.equalTo(44)
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(apiKeyTextField.snp.bottom).offset(22)
         }
         
         groupIdLabel.snp.makeConstraints {
@@ -163,11 +152,6 @@ final class ChooseView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func onChoose() {
-        guard let value = apiKeyTextField.text else { return }
-        delegate?.setupAPIKey(apiKey: value)
-    }
-    
     @objc func onSelect() {
         resignFirstResponder()
         delegate?.selectGroup()
@@ -178,8 +162,9 @@ final class ChooseView: UIView {
         delegate?.openAsOnboarding()
     }
     
-    @objc func onShow() {
-        delegate?.openApp()
+    @objc func onApply() {
+        guard let value = apiKeyTextField.text else { return }
+        delegate?.apply(apiKey: value)
     }
     
     @objc func switchFirstResponder() {

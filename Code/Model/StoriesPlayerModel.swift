@@ -8,12 +8,22 @@
 import Foundation
 import StorySDK
 
+protocol StoriesPlayerModelDelegate: AnyObject {
+    func apiKeyDidChanged()
+}
+
 class StoriesPlayerModel {
-    private var apiKey: String
+    var apiKey: String {
+        didSet {
+            delegate?.apiKeyDidChanged()
+        }
+    }
     private weak var widget: SRStoryWidget?
+    weak var delegate: StoriesPlayerModelDelegate?
     
-    init(apiKey: String) {
+    init(apiKey: String, delegate: StoriesPlayerModelDelegate? = nil) {
         self.apiKey = apiKey
+        self.delegate = delegate
     }
     
     func setup(widget: SRStoryWidget) {
@@ -28,6 +38,10 @@ class StoriesPlayerModel {
     }
     
     func fetchData() {
+        widget?.load()
+    }
+    
+    func openSettings() {
         widget?.load()
     }
     

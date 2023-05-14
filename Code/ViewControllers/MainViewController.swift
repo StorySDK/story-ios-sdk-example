@@ -10,13 +10,14 @@ import UIKit
 import StorySDK
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
-    private var model: StoriesPlayerModel?
+    var model: StoriesPlayerModel?
     
     let widget = SRStoryWidget()
     
     init(model: StoriesPlayerModel) {
         super.init(nibName: nil, bundle: nil)
         self.model = model
+        self.model?.delegate = self
     }
     
     @available(*, unavailable)
@@ -56,7 +57,6 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         view.backgroundColor = .systemBackground
         
         setupLayout()
-        
         widget.delegate = self
         
         model?.setup(widget: widget)
@@ -68,13 +68,31 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
             target: self,
             action: #selector(fetchData)
         )
+        
+        navigationItem.leftBarButtonItem = .init(
+            image: .init(systemName: "circle.grid.hex.fill"),
+            style: .plain,
+            target: self,
+            action: #selector(openSettings)
+        )
     }
     
     @objc func fetchData() {
         model?.fetchData()
     }
     
+    @objc func openSettings() {
+        present(ChooseViewController(model: model), animated: true)
+    }
+    
     @objc func reloadApp() {
         model?.reloadApp()
+    }
+}
+
+extension MainViewController: StoriesPlayerModelDelegate {
+    func apiKeyDidChanged() {
+        model?.setup(widget: widget)
+        reloadApp()
     }
 }
