@@ -10,5 +10,5 @@ import StorySDK
 
 struct AppConfig {
     static let storySdkAPIUrl = "https://api.diffapp.link/sdk/v1/"
-    static let defaultAppAPIKey = "eb1b2c80-02a4-48d3-9dff-4eedc0e542ac"
+    static let defaultAppAPIKey = "d75574ef-a2f2-4b1b-8550-8f93f40cf281"
 }
