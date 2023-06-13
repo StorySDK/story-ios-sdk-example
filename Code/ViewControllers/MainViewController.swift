@@ -5,19 +5,43 @@
 //  Created by Ingvarr Alef on 08.04.2023.
 //
 
-
 import UIKit
 import StorySDK
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
-    var model: StoriesPlayerModel?
+    weak var model: SettingsModel?
     
+    var storiesModel: StoriesPlayerModel?
     let widget = SRStoryWidget()
     
-    init(model: StoriesPlayerModel) {
+    weak var coordinator: AppCoordinatorProtocol?
+    
+    private var titleLabel: UILabel = {
+        let lbl = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 200, height: 40)))
+        
+        return lbl
+    }()
+    
+    init(model: SettingsModel) {
         super.init(nibName: nil, bundle: nil)
+        
         self.model = model
         self.model?.delegate = self
+        
+        if let apiKey = model.selected?.apiKey {
+            self.storiesModel = StoriesPlayerModel(apiKey: apiKey)
+        }
+        
+        self.storiesModel?.delegate = self
+        
+        let vi = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 200, height: 40)))
+        vi.backgroundColor = .clear//.green
+        titleLabel.text = model.selected?.projectName
+        
+        vi.addSubview(titleLabel)
+        
+        vi.addTapTouch(self, action: #selector(onTitleTap))
+        self.navigationItem.titleView = vi
     }
     
     @available(*, unavailable)
@@ -33,12 +57,14 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         guard groups.count > index else { return }
         let group = groups[index]
         
-        let vc = SRStoriesViewController(group)
-        present(vc, animated: true)
+        coordinator?.openStories(group: group, in: self)
     }
     
     func onWidgetGroupsLoaded(groups: [SRStoryGroup]) {
-        
+        if groups.count == 0 {
+            let errorMsg = "There are no active groups"
+            coordinator?.showError(errorMsg, in: self)
+        }
     }
     
     func setupLayout() {
@@ -59,7 +85,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         setupLayout()
         widget.delegate = self
         
-        model?.setup(widget: widget)
+        storiesModel?.setup(widget: widget)
         reloadApp()
         
         navigationItem.rightBarButtonItem = .init(
@@ -73,26 +99,41 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
             image: .init(systemName: "circle.grid.hex.fill"),
             style: .plain,
             target: self,
-            action: #selector(openSettings)
+            action: #selector(onSettingsTap)
         )
     }
     
     @objc func fetchData() {
-        model?.fetchData()
+        storiesModel?.fetchData()
     }
     
-    @objc func openSettings() {
-        present(ChooseViewController(model: model), animated: true)
+    @objc func onSettingsTap() {
+        coordinator?.openSettings(model: storiesModel, in: self)
+    }
+    
+    @objc func onTitleTap() {
+        model?.delegate = self
+        coordinator?.showProjects(in: self)
     }
     
     @objc func reloadApp() {
-        model?.reloadApp()
+        storiesModel?.reloadApp()
     }
 }
 
 extension MainViewController: StoriesPlayerModelDelegate {
     func apiKeyDidChanged() {
-        model?.setup(widget: widget)
+        storiesModel?.setup(widget: widget)
         reloadApp()
+    }
+}
+
+extension MainViewController: SettingsModelDelegate {
+    func didChange() {
+    }
+    
+    func didSelect(project: ProjectSettingsModel) {
+        titleLabel.text = project.projectName
+        storiesModel?.apiKey = project.apiKey
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 import StorySDK
 
 protocol ChooseViewControllerDelegate: AnyObject {
