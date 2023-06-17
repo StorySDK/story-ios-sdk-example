@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProjectSettingsModel {
+class ProjectSettingsModel: Codable {
     var projectName: String
     var apiKey: String
     

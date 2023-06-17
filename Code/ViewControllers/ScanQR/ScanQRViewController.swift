@@ -121,7 +121,7 @@ final class ScanQRViewController: UIViewController {
     
     private func apiKeyFoundAndRecognized(_ value: String) {
         captureSession?.stopRunning()
-        model?.addToken(value: prepareApiKey(value))
+        _ = model?.addProject(value: prepareApiKey(value))
         
         self.dismiss(animated: true, completion: nil)
     }

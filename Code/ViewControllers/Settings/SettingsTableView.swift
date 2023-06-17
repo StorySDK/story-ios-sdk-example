@@ -12,7 +12,6 @@ class SettingsTableView: UITableView {
     
     weak var model: SettingsModel? {
         didSet {
-            model?.delegate = self
             reloadData()
         }
     }
@@ -38,16 +37,38 @@ extension SettingsTableView: UITableViewDataSource {
         guard let model = model else { return UITableViewCell() }
         
         let cell = UITableViewCell()
-        cell.accessoryType = .detailButton
+        cell.backgroundColor = .spTableBackground
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0, weight:UIFont.Weight.medium)
+        
+        if indexPath.row == model.count - 1 {
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        }
         
         if indexPath.row == model.count - 1 {
             cell.textLabel?.text = model.action
             cell.textLabel?.textColor = UIColor.spRose
+            cell.accessoryView = nil
         } else {
             cell.textLabel?.text = model.listOfProjects[indexPath.row].projectName
+            cell.textLabel?.textColor = .spLabelPrimary
+            
+            let settingButton = UIButton(type: .custom)
+            settingButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            settingButton.addTarget(self, action: #selector(accessoryButtonTapped(sender:)), for: .touchUpInside)
+            settingButton.setImage(UIImage(named: "settings.png"), for: .normal)
+            settingButton.contentMode = .scaleAspectFit
+            settingButton.tag = indexPath.row
+            cell.accessoryView = settingButton as UIView
         }
         
         return cell
+    }
+    
+    @objc func accessoryButtonTapped(sender : UIButton) {
+        guard let model = model else { return }
+        
+        let item = model.listOfProjects[sender.tag]
+        actionDelegate?.settings(project: item)
     }
 }
 
@@ -63,13 +84,8 @@ extension SettingsTableView: UITableViewDelegate {
             actionDelegate?.choose(project: item)
         }
     }
-}
-
-extension SettingsTableView: SettingsModelDelegate {
-    func didChange() {
-        reloadData()
-    }
     
-    func didSelect(project: ProjectSettingsModel) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 46.0
     }
 }

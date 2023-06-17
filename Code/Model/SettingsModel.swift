@@ -7,14 +7,17 @@
 
 import Foundation
 import StorySDK
+import Combine
 
 protocol SettingsModelDelegate: AnyObject {
     func didChange()
-    func didSelect(project: ProjectSettingsModel)
+    func didSelect(project: ProjectSettingsModel?)
 }
 
 class SettingsModel {
-    var listOfProjects: [ProjectSettingsModel]
+    static let projectsKey = "StoriesPlayer_listOfProjects"
+    
+    var listOfProjects: [ProjectSettingsModel] = []
     var action: String = "+ Add project"
     var count: Int {
         return listOfProjects.count + 1
@@ -24,24 +27,23 @@ class SettingsModel {
         return listOfProjects.isEmpty
     }
     
-    var selected: ProjectSettingsModel? {
-        didSet {
-            if let selected = selected {
-                delegate?.didSelect(project: selected)
-            }
-        }
-    }
+    @Published var selected: ProjectSettingsModel?
     
     weak var delegate: SettingsModelDelegate?
     
-    init(list: [ProjectSettingsModel]) {
+    init() {
+        let list = load() ?? []
         self.listOfProjects = list
         self.selected = list.first
     }
     
-    func addToken(value: String?) -> Bool {
+    func addProject(value: String?) -> Bool {
         guard let value = value else { return false }
         guard !value.isEmpty else { return false }
+        
+        guard listOfProjects.firstIndex(where: { $0.apiKey == value }) == nil else {
+            return false
+        }
         
         let configuration = SRConfiguration(sdkId: value, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true)
         StorySDK.shared.configuration = configuration
@@ -55,6 +57,7 @@ class SettingsModel {
                     self?.selected = project
                 }
                 
+                self?.save(list: self?.listOfProjects)
                 self?.delegate?.didChange()
             case .failure(let error):
                 print("Error:", error.localizedDescription)
@@ -62,5 +65,39 @@ class SettingsModel {
         }
         
         return true
+    }
+    
+    func deleteProject(key: String) {
+        listOfProjects.removeAll(where: {$0.apiKey == key})
+        save(list: listOfProjects)
+        delegate?.didChange()
+    }
+    
+    private func save(list: [ProjectSettingsModel]?) {
+        guard let list = list else { return }
+        
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(list)
+            
+            UserDefaults.standard.set(data, forKey: SettingsModel.projectsKey)
+        } catch {
+            print("Unable to encode ProjectSettingsModel (\(error))")
+        }
+    }
+    
+    private func load() -> [ProjectSettingsModel]? {
+        if let data = UserDefaults.standard.data(forKey: SettingsModel.projectsKey) {
+            do {
+                let decoder = JSONDecoder()
+                let list = try decoder.decode([ProjectSettingsModel].self, from: data)
+                
+                return list
+            } catch {
+                print("Unable to decode ProjectSettingsModel (\(error))")
+            }
+        }
+        
+        return nil
     }
 }

@@ -59,7 +59,7 @@ extension OnboardingViewController: SettingsModelDelegate {
         }
     }
     
-    func didSelect(project: ProjectSettingsModel) {
+    func didSelect(project: ProjectSettingsModel?) {
         
     }
 }

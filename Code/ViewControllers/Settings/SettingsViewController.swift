@@ -7,9 +7,11 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 protocol SettingsViewControllerDelegate: AnyObject {
     func choose(project: ProjectSettingsModel)
+    func settings(project: ProjectSettingsModel)
     func addProject()
 }
 
@@ -18,6 +20,8 @@ final class SettingsViewController: UIViewController {
     
     private lazy var customView: SettingsView = SettingsView(frame: .zero)
     private weak var model: SettingsModel?
+    
+    private var cancellables: Set<AnyCancellable> = []
     
     init(model: SettingsModel) {
         super.init(nibName: nil, bundle: nil)
@@ -47,10 +51,18 @@ final class SettingsViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func reload() {
+        customView.reload()
+    }
 }
 
 extension SettingsViewController: SettingsViewControllerDelegate {
     func choose(project: ProjectSettingsModel) {
+        coordinator?.chooseProject(model: project, from: self)
+    }
+    
+    func settings(project: ProjectSettingsModel) {
         coordinator?.openProjectSettings(model: project, in: self)
     }
     

@@ -7,6 +7,62 @@
 
 import UIKit
 import StorySDK
+import SnapKit
+import Combine
+
+final class TitleNavView: UIView {
+    var title: String? {
+        didSet {
+            titleLabel.text = title
+            setNeedsLayout()
+        }
+    }
+    
+    private var titleLabel: UILabel = {
+        let lbl = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 330, height: 40)))
+        lbl.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
+        lbl.textAlignment = .left
+        return lbl
+    }()
+    
+    private var arrowImageView: UIImageView = {
+        let iv = UIImageView(image: UIImage(named: "arrow-bottom.png"))
+        
+        return iv
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addMultipleSubviews(with: [titleLabel,
+                                   arrowImageView,])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let str: NSString = NSString(string: title ?? "")
+        let sz = str.boundingRect(with: CGSize(width: 330, height: 40), options: .usesLineFragmentOrigin, attributes: [.font: titleLabel.font ?? UIFont.systemFont(ofSize: 17.0)], context: nil)
+
+        titleLabel.snp.remakeConstraints {
+            $0.left.equalToSuperview()
+            $0.width.equalTo(ceil(sz.width + 1))
+            //$0.height.equalTo(40)
+            $0.height.equalToSuperview()
+        }
+        
+        arrowImageView.snp.remakeConstraints {
+            $0.leading.equalTo(titleLabel.snp.trailing).offset(12)
+            $0.centerY.equalToSuperview()
+            $0.width.height.equalTo(20)
+        }
+
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
     weak var model: SettingsModel?
@@ -16,11 +72,9 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
     
     weak var coordinator: AppCoordinatorProtocol?
     
-    private var titleLabel: UILabel = {
-        let lbl = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: 200, height: 40)))
-        
-        return lbl
-    }()
+    private var cancellables: Set<AnyCancellable> = []
+    
+    private var titleView = TitleNavView(frame: CGRect(origin: .zero, size: CGSize(width: 330, height: 40)))
     
     init(model: SettingsModel) {
         super.init(nibName: nil, bundle: nil)
@@ -28,20 +82,17 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         self.model = model
         self.model?.delegate = self
         
+        self.model?.$selected
+            .sink { [weak self] in self?.didSelect(project: $0) }
+            .store(in: &cancellables)
+        
         if let apiKey = model.selected?.apiKey {
-            self.storiesModel = StoriesPlayerModel(apiKey: apiKey)
+            storiesModel = StoriesPlayerModel(apiKey: apiKey)
         }
         
-        self.storiesModel?.delegate = self
-        
-        let vi = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 200, height: 40)))
-        vi.backgroundColor = .clear//.green
-        titleLabel.text = model.selected?.projectName
-        
-        vi.addSubview(titleLabel)
-        
-        vi.addTapTouch(self, action: #selector(onTitleTap))
-        self.navigationItem.titleView = vi
+        storiesModel?.delegate = self
+        titleView.addTapTouch(self, action: #selector(onTitleTap))
+        navigationItem.titleView = titleView
     }
     
     @available(*, unavailable)
@@ -113,7 +164,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
     
     @objc func onTitleTap() {
         model?.delegate = self
-        coordinator?.showProjects(in: self)
+        onSettingsTap()
     }
     
     @objc func reloadApp() {
@@ -132,8 +183,10 @@ extension MainViewController: SettingsModelDelegate {
     func didChange() {
     }
     
-    func didSelect(project: ProjectSettingsModel) {
-        titleLabel.text = project.projectName
+    func didSelect(project: ProjectSettingsModel?) {
+        guard let project = project else { return }
+        
+        titleView.title = project.projectName
         storiesModel?.apiKey = project.apiKey
     }
 }

@@ -16,11 +16,13 @@ final class SettingsView: UIView {
     weak var model: SettingsModel? {
         didSet {
             settingsTableView.model = model
+            model?.delegate = self
         }
     }
     
     private lazy var settingsTableView: SettingsTableView = {
         let v = SettingsTableView(frame: .zero, model: model)
+        v.layer.cornerRadius = 14.0
         return v
     }()
     
@@ -29,10 +31,16 @@ final class SettingsView: UIView {
         backgroundColor = .spBackground
         
         addMultipleSubviews(with: [settingsTableView])
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         
-        settingsTableView.snp.makeConstraints {
+        let h: CGFloat = CGFloat(model?.count ?? 1) * 46.0
+        
+        settingsTableView.snp.remakeConstraints {
             $0.width.equalToSuperview().inset(16)
-            $0.height.equalTo(200)
+            $0.height.equalTo(h)
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().offset(100)
         }
@@ -42,11 +50,26 @@ final class SettingsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reload() {
+        settingsTableView.reloadData()
+    }
+    
     @objc func onChooseProject() {
         //delegate?.chooseProject()
     }
     
     @objc func onAddProject() {
         delegate?.addProject()
+    }
+}
+
+extension SettingsView: SettingsModelDelegate {
+    func didChange() {
+        setNeedsLayout()
+        layoutIfNeeded()
+        settingsTableView.reloadData()
+    }
+    
+    func didSelect(project: ProjectSettingsModel?) {
     }
 }

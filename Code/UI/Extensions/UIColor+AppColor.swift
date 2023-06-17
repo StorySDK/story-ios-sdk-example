@@ -22,4 +22,6 @@ extension UIColor {
     static var spGray2: UIColor { palette(.gray2) }
     static var spRose: UIColor { palette(.rose) }
     static var spPrimary: UIColor { palette(.primary) }
+    static var spLabelPrimary: UIColor { palette(.labelPrimary) }
+    static var spTableBackground: UIColor { palette(.tableBackground) }
 }

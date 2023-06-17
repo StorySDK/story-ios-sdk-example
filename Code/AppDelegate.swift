@@ -15,17 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        //projects = SettingsModel(list: [AppConfig.defaultProject])
-        // load projects
-        projects = SettingsModel(list: [])
+        projects = SettingsModel()
         
         coordinator = AppCoordinator(model: projects)
         coordinator?.start()
         
+        UINavigationBar.appearance().tintColor = UIColor.spRose
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .systemBackground
         window?.rootViewController = coordinator?.navigation
-        //window?.rootViewController = UINavigationController(rootViewController: MainViewController(model: StoriesPlayerModel(apiKey: AppConfig.defaultAppAPIKey)))
         window?.makeKeyAndVisible()
         
         return true

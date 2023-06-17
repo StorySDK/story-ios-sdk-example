@@ -22,6 +22,9 @@ protocol AppCoordinatorProtocol: AnyObject {
     func showMenu(in vc: UIViewController)
     func showAddTokenDialog(in vc: UIViewController, model: SettingsModel?)
     func showError(_ message: String, in vc: UIViewController)
+    
+    func chooseProject(model: ProjectSettingsModel, from: UIViewController)
+    func deleteProject(key: String, from: UIViewController)
 }
 
 final class AppCoordinator: AppCoordinatorProtocol {
@@ -80,7 +83,7 @@ final class AppCoordinator: AppCoordinatorProtocol {
     
     func openProjectSettings(model: ProjectSettingsModel, in vc: UIViewController) {
         let controller = ProjectSettingsViewController(model: model)
-        //vc.coordinator = self
+        controller.coordinator = self
         
         vc.navigationController?.pushViewController(controller, animated: true)
     }
@@ -144,9 +147,13 @@ final class AppCoordinator: AppCoordinatorProtocol {
                                      preferredStyle: .alert)
         dialog.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
-        let done: UIAlertAction = UIAlertAction(title: "Done", style: .default, handler: { [weak dialog] _ in
+        let done: UIAlertAction = UIAlertAction(title: "Done", style: .default, handler: { [weak dialog, weak self] _ in
             if let value = dialog?.textFields?.first?.text {
-                model?.addToken(value: value)
+                if let result = model?.addProject(value: value) {
+                    if !result {
+                        self?.showError("This project already exists", in: vc)
+                    }
+                }
             }
         })
         
@@ -162,10 +169,21 @@ final class AppCoordinator: AppCoordinatorProtocol {
     func showError(_ message: String, in vc: UIViewController) {
         let appName = Bundle.main.infoDictionary?["CFBundleDisplayName"] as? String ?? ""
         
-        let alert = UIAlertController(title: "Error", message: "\(appName): There are no active groups", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Error", message: "\(appName): \(message)", preferredStyle: UIAlertController.Style.alert)
         let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okButton)
         
         vc.present(alert, animated: true)
+    }
+    
+    func chooseProject(model: ProjectSettingsModel, from: UIViewController) {
+        from.dismiss(animated: true)
+        projects.selected = model
+    }
+    
+    func deleteProject(key: String, from: UIViewController) {
+        projects.deleteProject(key: key)
+        
+        from.navigationController?.popViewController(animated: true)
     }
 }
