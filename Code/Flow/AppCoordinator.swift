@@ -13,15 +13,18 @@ protocol AppCoordinatorProtocol: AnyObject {
     func start()
     
     func openOnboarding()
-    func openMain(project: ProjectSettingsModel)
+    func openMain()
     func openSettings(model: StoriesPlayerModel?, in vc: UIViewController)
     func openProjectSettings(model: ProjectSettingsModel, in vc: UIViewController)
-    func openStories(group: SRStoryGroup, in vc: UIViewController)
+    func openStories(group: SRStoryGroup, in vc: UIViewController,
+                     delegate: SRStoryWidgetDelegate?, animated: Bool)
     func openScanQR(in vc: UIViewController)
     func showProjects(in vc: UIViewController)
     func showMenu(in vc: UIViewController)
     func showAddTokenDialog(in vc: UIViewController, model: SettingsModel?)
     func showError(_ message: String, in vc: UIViewController)
+    
+    func showAddTokenDialog(_ vc: UIViewController)
     
     func chooseProject(model: ProjectSettingsModel, from: UIViewController)
     func deleteProject(key: String, from: UIViewController)
@@ -30,50 +33,37 @@ protocol AppCoordinatorProtocol: AnyObject {
 final class AppCoordinator: AppCoordinatorProtocol {
     var navigation: UINavigationController
     var projects: SettingsModel
+    var onboarding: StoriesPlayerModel
     
     init(model: SettingsModel) {
         navigation = UINavigationController()
         self.projects = model
+        self.onboarding = StoriesPlayerModel(apiKey: AppConfig.defaultAppAPIKey)
     }
     
     func start() {
         if projects.isEmpty {
             openOnboarding()
         } else {
-            openMain(project: AppConfig.defaultProject)
+            openMain()
         }
     }
     
     func openOnboarding() {
-        let vc = OnboardingViewController(model: projects)
+        let vc = OnboardingViewController(model: projects, storiesModel: onboarding)
         vc.coordinator = self
         
         navigation.pushViewController(vc, animated: false)
     }
     
-//    func openMain(in vc: UIViewController) {
-    func openMain(project: ProjectSettingsModel) {
-        //let vc = MainViewController(model: StoriesPlayerModel(apiKey: project.apiKey))
-//        let vc = MainViewController(model: StoriesPlayerModel(apiKey: AppConfig.defaultAppAPIKey))
-        
+    func openMain() {
         let vc = MainViewController(model: projects)
         vc.coordinator = self
         
         navigation.pushViewController(vc, animated: false)
     }
     
-//    func openSettings(model: StoriesPlayerModel?, in vc: UIViewController) {
-//        //let settings = ChooseViewController(model: model)
-//        //let settings = SettingsViewController()
-//
-//        let settings = UINavigationController(rootViewController: ProjectSettingsViewController(model: AppConfig.defaultProject))
-//        vc.present(settings, animated: true)
-//    }
-    
     func openSettings(model: StoriesPlayerModel?, in vc: UIViewController) {
-        //let settings = ChooseViewController(model: model)
-        //let settings = SettingsViewController()
-        
         let controller = SettingsViewController(model: projects)
         controller.coordinator = self
         
@@ -88,9 +78,12 @@ final class AppCoordinator: AppCoordinatorProtocol {
         vc.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func openStories(group: SRStoryGroup, in vc: UIViewController) {
+    func openStories(group: SRStoryGroup, in vc: UIViewController,
+                     delegate: SRStoryWidgetDelegate?, animated: Bool) {
         let controller = SRStoriesViewController(group)
-        vc.present(controller, animated: true)
+        controller.delegate = delegate
+        
+        vc.present(controller, animated: animated)
     }
     
     func openScanQR(in vc: UIViewController) {
@@ -98,7 +91,8 @@ final class AppCoordinator: AppCoordinatorProtocol {
         
         let nvc = UINavigationController(rootViewController: controller)
         weak var wvc = controller
-        vc.present(nvc, animated: true, completion: {
+        
+        vc.presentedViewController?.present(nvc, animated: true, completion: {
             wvc?.startScanningQR()
         })
     }
@@ -138,7 +132,11 @@ final class AppCoordinator: AppCoordinatorProtocol {
         menu.addAction(addToken)
         menu.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
-        vc.present(menu, animated: true)
+        vc.presentedViewController?.present(menu, animated: true)
+    }
+    
+    func showAddTokenDialog(_ vc: UIViewController) {
+        showAddTokenDialog(in: vc, model: projects)
     }
     
     func showAddTokenDialog(in vc: UIViewController, model: SettingsModel?) {
@@ -163,7 +161,7 @@ final class AppCoordinator: AppCoordinatorProtocol {
         })
         
         dialog.addAction(done)
-        vc.present(dialog, animated: true)
+        vc.presentedViewController?.present(dialog, animated: true)
     }
     
     func showError(_ message: String, in vc: UIViewController) {

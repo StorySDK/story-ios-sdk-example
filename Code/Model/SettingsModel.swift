@@ -15,7 +15,7 @@ protocol SettingsModelDelegate: AnyObject {
 }
 
 class SettingsModel {
-    static let projectsKey = "StoriesPlayer_listOfProjects"
+    static let projectsKey = "StoriesPlayer-Projects"
     
     var listOfProjects: [ProjectSettingsModel] = []
     var action: String = "+ Add project"

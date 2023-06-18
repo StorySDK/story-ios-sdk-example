@@ -46,7 +46,6 @@ final class TitleNavView: UIView {
         titleLabel.snp.remakeConstraints {
             $0.left.equalToSuperview()
             $0.width.equalTo(ceil(sz.width + 1))
-            //$0.height.equalTo(40)
             $0.height.equalToSuperview()
         }
         
@@ -65,6 +64,10 @@ final class TitleNavView: UIView {
 
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
+    func onWidgetMethodCall(_ selectorName: String?) {
+        
+    }
+    
     weak var model: SettingsModel?
     
     var storiesModel: StoriesPlayerModel?
@@ -108,7 +111,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         guard groups.count > index else { return }
         let group = groups[index]
         
-        coordinator?.openStories(group: group, in: self)
+        coordinator?.openStories(group: group, in: self, delegate: self, animated: true)
     }
     
     func onWidgetGroupsLoaded(groups: [SRStoryGroup]) {
@@ -116,17 +119,6 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
             let errorMsg = "There are no active groups"
             coordinator?.showError(errorMsg, in: self)
         }
-    }
-    
-    func setupLayout() {
-        widget.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(widget)
-        
-        NSLayoutConstraint.activate([
-            widget.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            widget.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            widget.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-        ])
     }
     
     override func viewDidLoad() {
@@ -169,6 +161,14 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
     
     @objc func reloadApp() {
         storiesModel?.reloadApp()
+    }
+    
+    private func setupLayout() {
+        view.addMultipleSubviews(with: [widget])
+        
+        widget.snp.remakeConstraints {
+            $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
+        }
     }
 }
 

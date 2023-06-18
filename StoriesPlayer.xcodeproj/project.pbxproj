@@ -29,11 +29,8 @@
 		57C2B8052A37A15600348F87 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8042A37A15600348F87 /* ScanQRView.swift */; };
 		57C2B8072A37A6EF00348F87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C2B8062A37A6EF00348F87 /* AVFoundation.framework */; };
 		57C2B80A2A37C36F00348F87 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */; };
-		57C2B80C2A37C3AB00348F87 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B80B2A37C3AB00348F87 /* OnboardingView.swift */; };
 		8D356C7929E16A1800B08643 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D356C7829E16A1800B08643 /* MainViewController.swift */; };
 		8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */; };
-		8D84A6CE29F1DA3A0024C58D /* ChooseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */; };
-		8D84A6CF29F1DA3A0024C58D /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */; };
 		8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764129FF075C007CC68C /* UIView+Extension.swift */; };
 		8DB3764429FF2ADA007CC68C /* GroupPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */; };
 		8DB376502A02F51F007CC68C /* StoriesPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764E2A02F51F007CC68C /* StoriesPlayerTests.swift */; };
@@ -86,11 +83,8 @@
 		57C2B8042A37A15600348F87 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		57C2B8062A37A6EF00348F87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		57C2B80B2A37C3AB00348F87 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		8D356C7829E16A1800B08643 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerModel.swift; sourceTree = "<group>"; };
-		8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseView.swift; sourceTree = "<group>"; };
-		8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		8DB3764129FF075C007CC68C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPickerViewController.swift; sourceTree = "<group>"; };
 		8DB3764E2A02F51F007CC68C /* StoriesPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerTests.swift; sourceTree = "<group>"; };
@@ -224,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */,
-				57C2B80B2A37C3AB00348F87 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -235,8 +228,6 @@
 				57C2B8082A37C35600348F87 /* Onboarding */,
 				57C2B8032A37A14800348F87 /* ScanQR */,
 				57A3698B2A35CB6600FBBD38 /* Settings */,
-				8D84A6CC29F1DA3A0024C58D /* ChooseView.swift */,
-				8D84A6CD29F1DA3A0024C58D /* ChooseViewController.swift */,
 				8D356C7829E16A1800B08643 /* MainViewController.swift */,
 				8DB3764329FF2ADA007CC68C /* GroupPickerViewController.swift */,
 				57A369822A353CF900FBBD38 /* ChooseProjectViewController.swift */,
@@ -452,10 +443,7 @@
 				57A369972A37628300FBBD38 /* ProjectSettingsView.swift in Sources */,
 				57A369882A35495A00FBBD38 /* StartViewController.swift in Sources */,
 				57A369992A37657A00FBBD38 /* Palette.swift in Sources */,
-				8D84A6CF29F1DA3A0024C58D /* ChooseViewController.swift in Sources */,
 				57A3698F2A35CC6900FBBD38 /* SettingsViewController.swift in Sources */,
-				8D84A6CE29F1DA3A0024C58D /* ChooseView.swift in Sources */,
-				57C2B80C2A37C3AB00348F87 /* OnboardingView.swift in Sources */,
 				8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */,
 				57C2B80A2A37C36F00348F87 /* OnboardingViewController.swift in Sources */,
 				8DB3764429FF2ADA007CC68C /* GroupPickerViewController.swift in Sources */,
@@ -633,7 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -654,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 22;
+				CURRENT_PROJECT_VERSION = 26;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
