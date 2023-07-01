@@ -37,8 +37,6 @@ final class ScanQRViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        //customView.delegate = self
-        
         view.addSubview(customView)
         
         setupCamera()
@@ -46,7 +44,6 @@ final class ScanQRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Scan QR"
         
         customView.snp.makeConstraints {
@@ -58,7 +55,7 @@ final class ScanQRViewController: UIViewController {
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        .lightContent
     }
 
     func applyStyles() {

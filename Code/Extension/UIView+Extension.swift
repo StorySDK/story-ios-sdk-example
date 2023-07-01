@@ -11,7 +11,7 @@ extension UIView {
     
     func addMultipleSubviews(with subviews: [UIView?]) {
         subviews.compactMap {$0}.forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false;
+            $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
     }

@@ -38,7 +38,7 @@ extension SettingsTableView: UITableViewDataSource {
         
         let cell = UITableViewCell()
         cell.backgroundColor = .spTableBackground
-        cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0, weight:UIFont.Weight.medium)
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 17.0, weight: UIFont.Weight.medium)
         
         if indexPath.row == model.count - 1 {
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
@@ -64,7 +64,7 @@ extension SettingsTableView: UITableViewDataSource {
         return cell
     }
     
-    @objc func accessoryButtonTapped(sender : UIButton) {
+    @objc func accessoryButtonTapped(sender: UIButton) {
         guard let model = model else { return }
         
         let item = model.listOfProjects[sender.tag]

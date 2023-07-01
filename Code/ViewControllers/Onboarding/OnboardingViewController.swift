@@ -45,7 +45,7 @@ final class OnboardingViewController: UIViewController {
         setupLayout()
         widget.delegate = self
         
-        storiesModel?.setup(widget: widget)
+        storiesModel?.setup(widget: widget, onboardingFilter: false)
         storiesModel?.reloadApp()
     }
     

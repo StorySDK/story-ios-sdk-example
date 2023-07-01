@@ -20,11 +20,11 @@ class SettingsModel {
     var listOfProjects: [ProjectSettingsModel] = []
     var action: String = "+ Add project"
     var count: Int {
-        return listOfProjects.count + 1
+        listOfProjects.count + 1
     }
     
     var isEmpty: Bool {
-        return listOfProjects.isEmpty
+        listOfProjects.isEmpty
     }
     
     @Published var selected: ProjectSettingsModel?

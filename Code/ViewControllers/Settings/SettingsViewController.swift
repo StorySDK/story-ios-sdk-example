@@ -13,6 +13,8 @@ protocol SettingsViewControllerDelegate: AnyObject {
     func choose(project: ProjectSettingsModel)
     func settings(project: ProjectSettingsModel)
     func addProject()
+    func openPrivacyPolicyURL()
+    func openTermsofUseURL()
 }
 
 final class SettingsViewController: UIViewController {
@@ -68,5 +70,13 @@ extension SettingsViewController: SettingsViewControllerDelegate {
     
     func addProject() {
         coordinator?.showMenu(in: self)
+    }
+    
+    func openPrivacyPolicyURL() {
+        coordinator?.openURL(URL(string: "https://www.termsfeed.com/live/71f7c932-062f-43f9-afa5-d13dffa22423"))
+    }
+    
+    func openTermsofUseURL() {
+        coordinator?.openURL(URL(string: "https://www.termsfeed.com/live/cfba5e97-d9bb-4eec-9fe4-12c235df17a2"))
     }
 }

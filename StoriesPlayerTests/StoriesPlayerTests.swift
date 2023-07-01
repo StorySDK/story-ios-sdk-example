@@ -22,6 +22,10 @@ class StoriesPlayerTests: XCTestCase, SRStoryWidgetDelegate {
         
     }
     
+    func onWidgetMethodCall(_ selectorName: String?) {
+        
+    }
+    
     func onWidgetGroupsLoaded(groups: [SRStoryGroup]) {
         if groups.count > 0 {
             expectation?.fulfill()

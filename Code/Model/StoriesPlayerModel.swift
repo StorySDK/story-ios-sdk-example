@@ -26,10 +26,10 @@ class StoriesPlayerModel {
         self.delegate = delegate
     }
     
-    func setup(widget: SRStoryWidget) {
+    func setup(widget: SRStoryWidget, onboardingFilter: Bool = true) {
         self.widget = widget
         
-        let configuration = SRConfiguration(sdkId: apiKey, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true)
+        let configuration = SRConfiguration(sdkId: apiKey, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true, onboardingFilter: onboardingFilter)
         StorySDK.shared.configuration = configuration
     }
     

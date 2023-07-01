@@ -24,7 +24,7 @@ opt_in_rules:
   # Prefer implicit returns in closures, functions and getters.
   - implicit_return
 included:
-  - StorySDKExample
+  - Code
 line_length: 300
 function_body_length: 60
 type_body_length: 300

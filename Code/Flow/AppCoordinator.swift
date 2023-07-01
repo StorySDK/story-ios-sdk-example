@@ -18,6 +18,8 @@ protocol AppCoordinatorProtocol: AnyObject {
     func openProjectSettings(model: ProjectSettingsModel, in vc: UIViewController)
     func openStories(group: SRStoryGroup, in vc: UIViewController,
                      delegate: SRStoryWidgetDelegate?, animated: Bool)
+    func openStories(index: Int, groups: [SRStoryGroup], in vc: UIViewController,
+                     delegate: SRStoryWidgetDelegate?, animated: Bool)
     func openScanQR(in vc: UIViewController)
     func showProjects(in vc: UIViewController)
     func showMenu(in vc: UIViewController)
@@ -28,6 +30,8 @@ protocol AppCoordinatorProtocol: AnyObject {
     
     func chooseProject(model: ProjectSettingsModel, from: UIViewController)
     func deleteProject(key: String, from: UIViewController)
+    
+    func openURL(_ url: URL?)
 }
 
 final class AppCoordinator: AppCoordinatorProtocol {
@@ -86,13 +90,24 @@ final class AppCoordinator: AppCoordinatorProtocol {
         vc.present(controller, animated: animated)
     }
     
+    func openStories(index: Int, groups: [SRStoryGroup], in vc: UIViewController,
+                     delegate: SRStoryWidgetDelegate?, animated: Bool) {
+        let controller = SRNavigationController(index: index, groups: groups)
+        vc.present(controller, animated: animated)
+    }
+    
     func openScanQR(in vc: UIViewController) {
         let controller = ScanQRViewController(model: projects)
         
         let nvc = UINavigationController(rootViewController: controller)
         weak var wvc = controller
         
-        vc.presentedViewController?.present(nvc, animated: true, completion: {
+//        vc.presentedViewController?.present(nvc, animated: true, completion: {
+//            wvc?.startScanningQR()
+//        })
+//
+        let pvc = vc.presentedViewController ?? vc
+        pvc.present(nvc, animated: true, completion: {
             wvc?.startScanningQR()
         })
     }
@@ -132,7 +147,11 @@ final class AppCoordinator: AppCoordinatorProtocol {
         menu.addAction(addToken)
         menu.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         
-        vc.presentedViewController?.present(menu, animated: true)
+        if vc.presentedViewController == nil {
+            vc.present(menu, animated: true)
+        } else {
+            vc.presentedViewController?.present(menu, animated: true)
+        }
     }
     
     func showAddTokenDialog(_ vc: UIViewController) {
@@ -161,7 +180,11 @@ final class AppCoordinator: AppCoordinatorProtocol {
         })
         
         dialog.addAction(done)
-        vc.presentedViewController?.present(dialog, animated: true)
+        if vc.presentedViewController == nil {
+            vc.present(dialog, animated: true)
+        } else {
+            vc.presentedViewController?.present(dialog, animated: true)
+        }
     }
     
     func showError(_ message: String, in vc: UIViewController) {
@@ -183,5 +206,12 @@ final class AppCoordinator: AppCoordinatorProtocol {
         projects.deleteProject(key: key)
         
         from.navigationController?.popViewController(animated: true)
+    }
+    
+    func openURL(_ url: URL?) {
+        guard let url = url else { return }
+        guard UIApplication.shared.canOpenURL(url) else { return }
+        
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }

@@ -34,7 +34,7 @@ final class TitleNavView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addMultipleSubviews(with: [titleLabel,
-                                   arrowImageView,])
+                                   arrowImageView, ])
     }
     
     override func layoutSubviews() {
@@ -61,7 +61,6 @@ final class TitleNavView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
     func onWidgetMethodCall(_ selectorName: String?) {
@@ -109,9 +108,8 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
     
     func onWidgetGroupPresent(index: Int, groups: [SRStoryGroup], widget: SRStoryWidget) {
         guard groups.count > index else { return }
-        let group = groups[index]
         
-        coordinator?.openStories(group: group, in: self, delegate: self, animated: true)
+        coordinator?.openStories(index: index, groups: groups, in: self, delegate: self, animated: true)
     }
     
     func onWidgetGroupsLoaded(groups: [SRStoryGroup]) {

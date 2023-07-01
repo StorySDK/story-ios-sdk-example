@@ -58,7 +58,7 @@ final class ProjectSettingsView: UIView {
         
         addMultipleSubviews(with: [apiKeyLabel,
                                    apiKeyTextField,
-                                   deleteProjectButton])
+                                   deleteProjectButton, ])
         
         apiKeyLabel.snp.makeConstraints {
             $0.width.equalToSuperview().inset(padding)
@@ -74,7 +74,8 @@ final class ProjectSettingsView: UIView {
             $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(40)
         }
         
-        let paddingView = UIView(frame: CGRectMake(0, 0, 18, apiKeyTextField.frame.height))
+        let paddingView = UIView(frame: .init(origin: .zero,
+                                              size: CGSize(width: 18, height: apiKeyTextField.frame.height)))
         apiKeyTextField.leftView = paddingView
         apiKeyTextField.leftViewMode = .always
         
