@@ -27,6 +27,7 @@
 		57C2B8052A37A15600348F87 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8042A37A15600348F87 /* ScanQRView.swift */; };
 		57C2B8072A37A6EF00348F87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C2B8062A37A6EF00348F87 /* AVFoundation.framework */; };
 		57C2B80A2A37C36F00348F87 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */; };
+		57C5FD9E2A5ABEED00805A8D /* SRQRCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5FD9D2A5ABEED00805A8D /* SRQRCodeModel.swift */; };
 		8D356C7929E16A1800B08643 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D356C7829E16A1800B08643 /* MainViewController.swift */; };
 		8D84A6CB29F1DA2E0024C58D /* StoriesPlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */; };
 		8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB3764129FF075C007CC68C /* UIView+Extension.swift */; };
@@ -79,6 +80,7 @@
 		57C2B8042A37A15600348F87 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		57C2B8062A37A6EF00348F87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		57C5FD9D2A5ABEED00805A8D /* SRQRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRQRCodeModel.swift; sourceTree = "<group>"; };
 		8D356C7829E16A1800B08643 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerModel.swift; sourceTree = "<group>"; };
 		8DB3764129FF075C007CC68C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				57C2B8042A37A15600348F87 /* ScanQRView.swift */,
 				57C2B8012A37A0D500348F87 /* ScanQRViewController.swift */,
+				57C5FD9D2A5ABEED00805A8D /* SRQRCodeModel.swift */,
 			);
 			path = ScanQR;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				57A369932A37606C00FBBD38 /* ProjectSettingsModel.swift in Sources */,
 				57C2B8022A37A0D500348F87 /* ScanQRViewController.swift in Sources */,
 				3775361422234238005EE5FE /* AppDelegate.swift in Sources */,
+				57C5FD9E2A5ABEED00805A8D /* SRQRCodeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +640,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
@@ -657,7 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 27;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";

@@ -45,7 +45,8 @@ class SettingsModel {
             return false
         }
         
-        let configuration = SRConfiguration(sdkId: value, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true)
+        let configuration = SRConfiguration(language: Locale.preferredLanguages[0],
+                                            sdkId: value, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true)
         StorySDK.shared.configuration = configuration
         
         StorySDK.shared.getApp { [weak self] result in

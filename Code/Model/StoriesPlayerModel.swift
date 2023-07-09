@@ -29,7 +29,11 @@ class StoriesPlayerModel {
     func setup(widget: SRStoryWidget, onboardingFilter: Bool = true) {
         self.widget = widget
         
-        let configuration = SRConfiguration(sdkId: apiKey, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true, onboardingFilter: onboardingFilter)
+        let locale = Locale.preferredLanguages[0]
+        let languageCode = Locale(identifier: locale).languageCode ?? "en"
+        
+        let configuration = SRConfiguration(language: languageCode,
+                                            sdkId: apiKey, sdkAPIUrl: AppConfig.storySdkAPIUrl, needShowTitle: true, onboardingFilter: onboardingFilter)
         StorySDK.shared.configuration = configuration
     }
     

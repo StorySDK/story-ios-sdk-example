@@ -22,6 +22,8 @@ final class ScanQRViewController: UIViewController {
     weak var coordinator: AppCoordinatorProtocol?
     weak var actionDelegate: ScanQRViewControllerDelegate?
     
+    private let qrCodeModel = SRQRCodeModel()
+    
     private var infoStaticLabel: UILabel = UILabel()
     private lazy var customView: ScanQRView = ScanQRView(frame: .zero)
     
@@ -118,19 +120,16 @@ final class ScanQRViewController: UIViewController {
     
     private func apiKeyFoundAndRecognized(_ value: String) {
         captureSession?.stopRunning()
-        _ = model?.addProject(value: prepareApiKey(value))
         
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    private func prepareApiKey(_ value: String) -> String {
-        return value
+        let sdkToken = qrCodeModel.sdkTokenKey(by: value)
+        _ = model?.addProject(value: sdkToken)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @objc func onTap() {
         dismiss(animated: true, completion: nil)
     }
-
 }
 
 extension ScanQRViewController: AVCaptureMetadataOutputObjectsDelegate {

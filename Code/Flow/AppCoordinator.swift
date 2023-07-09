@@ -102,10 +102,6 @@ final class AppCoordinator: AppCoordinatorProtocol {
         let nvc = UINavigationController(rootViewController: controller)
         weak var wvc = controller
         
-//        vc.presentedViewController?.present(nvc, animated: true, completion: {
-//            wvc?.startScanningQR()
-//        })
-//
         let pvc = vc.presentedViewController ?? vc
         pvc.present(nvc, animated: true, completion: {
             wvc?.startScanningQR()
