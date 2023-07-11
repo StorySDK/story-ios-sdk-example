@@ -1,0 +1,707 @@
+{
+    "error": "",
+    "data": [
+        {
+            "id": "649bc62bca4c393822237866",
+            "creator_id": "6445b63f78c2fc786172612d",
+            "group_id": "649bc574ca4c393822237865",
+            "position": 1,
+            "story_data": {
+                "background": {
+                    "type": "color",
+                    "value": "#FFFFFFFF",
+                    "isFilled": true
+                },
+                "status": "active",
+                "widgets": [
+                    {
+                        "content": {
+                            "params": {
+                                "fillBorderRadius": 5,
+                                "fillColor": {
+                                    "fileId": "649bc6589b8b44c393cca923",
+                                    "type": "image",
+                                    "value": "https://storysdk.s3.eu-north-1.amazonaws.com/6445b63f78c2fc786172612d/1687930455349.webp"
+                                },
+                                "fillOpacity": 100,
+                                "hasBorder": false,
+                                "strokeColor": {
+                                    "type": "color",
+                                    "value": "#FFFFFF"
+                                },
+                                "strokeOpacity": 100,
+                                "strokeThickness": 3,
+                                "widgetOpacity": 100
+                            },
+                            "type": "rectangle"
+                        },
+                        "id": "25hS2XmiIYyd_UuXxeKOo",
+                        "position": {
+                            "height": 1104,
+                            "origin": {
+                                "height": 1104,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 228
+                            },
+                            "realHeight": 1104,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 228
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#18182EFF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 700
+                                },
+                                "fontSize": 72,
+                                "opacity": 100,
+                                "text": "Превью для StorySDK",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688363311461.webp"
+                        },
+                        "id": "VcpazIbOzoMcX81t0VY_0",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 108,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 1738
+                            },
+                            "realHeight": 108,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 1738
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "actionType": "story",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#FD19CC"
+                                },
+                                "borderColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "borderOpacity": 100,
+                                "borderRadius": 36,
+                                "borderWidth": 6,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "hasBorder": false,
+                                "hasIcon": false,
+                                "icon": {
+                                    "name": "ShareLineIcon"
+                                },
+                                "iconSize": 64,
+                                "opacity": 100,
+                                "storyId": "649bc9359b8b44c393cca927",
+                                "text": "Продолжить",
+                                "url": ""
+                            },
+                            "type": "click_me",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688362780162.webp"
+                        },
+                        "id": "XnbQaEFh3ByOcgNU4U9bA",
+                        "position": {
+                            "height": 144,
+                            "origin": {
+                                "height": 144,
+                                "width": 900,
+                                "x": 90,
+                                "y": 2104
+                            },
+                            "realHeight": 144,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 2104
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#A49BA4FF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "opacity": 100,
+                                "text": "You can test stories with this app. Add your projects for test",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1687931755048.webp"
+                        },
+                        "id": "kV114IJ-eEAOEjEkqygH7",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 153,
+                                "width": 900,
+                                "x": 90,
+                                "y": 1882
+                            },
+                            "realHeight": 153,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 1882
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    }
+                ],
+                "is_hidden": false,
+                "start_time": "2023-06-28T05:33:31.031Z",
+                "end_time": null
+            },
+            "layer_data": {
+                "layersGroupId": "sPqkjCotwYLNCmMPMq1Iu",
+                "positionInGroup": 1,
+                "score": {
+                    "letter": "A",
+                    "points": 0
+                },
+                "isDefaultLayer": true
+            },
+            "created_at": "2023-06-28T05:33:31.655Z",
+            "updated_at": "2023-07-03T05:48:31.929Z"
+        },
+        {
+            "id": "649bc9359b8b44c393cca927",
+            "creator_id": "6445b63f78c2fc786172612d",
+            "group_id": "649bc574ca4c393822237865",
+            "position": 2,
+            "story_data": {
+                "background": {
+                    "type": "color",
+                    "value": "#FFFFFFFF",
+                    "isFilled": true
+                },
+                "status": "active",
+                "widgets": [
+                    {
+                        "content": {
+                            "params": {
+                                "fillBorderRadius": 5,
+                                "fillColor": {
+                                    "fileId": "649bca9a7f621abf3a9ee30d",
+                                    "type": "image",
+                                    "value": "https://storysdk.s3.eu-north-1.amazonaws.com/6445b63f78c2fc786172612d/1687931545241.webp"
+                                },
+                                "fillOpacity": 100,
+                                "hasBorder": false,
+                                "strokeColor": {
+                                    "type": "color",
+                                    "value": "#FFFFFF"
+                                },
+                                "strokeOpacity": 100,
+                                "strokeThickness": 3,
+                                "widgetOpacity": 100
+                            },
+                            "type": "rectangle"
+                        },
+                        "id": "7HcOhKYeIfVjK7QuOkVJa",
+                        "position": {
+                            "height": 1104,
+                            "origin": {
+                                "height": 1104,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 228
+                            },
+                            "realHeight": 1104,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 228
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "actionType": "story",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#FD19CC"
+                                },
+                                "borderColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "borderOpacity": 100,
+                                "borderRadius": 36,
+                                "borderWidth": 6,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "hasBorder": false,
+                                "hasIcon": false,
+                                "icon": {
+                                    "name": "ShareLineIcon"
+                                },
+                                "iconSize": 64,
+                                "opacity": 100,
+                                "storyId": "649bcab9ca4c393822237869",
+                                "text": "Продолжить",
+                                "url": ""
+                            },
+                            "type": "click_me",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688362784816.webp"
+                        },
+                        "id": "HOp0Q_dF2665qcpL1zJeM",
+                        "position": {
+                            "height": 144,
+                            "origin": {
+                                "height": 144,
+                                "width": 900,
+                                "x": 90,
+                                "y": 2104
+                            },
+                            "realHeight": 144,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 2104
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#18182EFF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 700
+                                },
+                                "fontSize": 72,
+                                "opacity": 100,
+                                "text": "Scan QR Code\n",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1687930612250.webp"
+                        },
+                        "id": "81YrrfrmSicl-oqRLWdTE",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 108,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 1738
+                            },
+                            "realHeight": 108,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 1738
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#A49BA4FF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "opacity": 100,
+                                "text": "Add fast your stories with QR reader. It’s easy. Try now",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1687931809477.webp"
+                        },
+                        "id": "sXNqG5LsDn_KF8Mi-gmO_",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 153,
+                                "width": 900,
+                                "x": 90,
+                                "y": 1882
+                            },
+                            "realHeight": 153,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 1882
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    }
+                ],
+                "is_hidden": false,
+                "start_time": "2023-06-28T05:46:28.845Z",
+                "end_time": null
+            },
+            "layer_data": {
+                "layersGroupId": "ds0c_bm2AxIPtbZiAPvYr",
+                "positionInGroup": 1,
+                "score": {
+                    "letter": "A",
+                    "points": 0
+                },
+                "isDefaultLayer": true
+            },
+            "created_at": "2023-06-28T05:46:29.069Z",
+            "updated_at": "2023-07-03T05:47:33.747Z"
+        },
+        {
+            "id": "649bcab9ca4c393822237869",
+            "creator_id": "6445b63f78c2fc786172612d",
+            "group_id": "649bc574ca4c393822237865",
+            "position": 3,
+            "story_data": {
+                "background": {
+                    "type": "color",
+                    "value": "#FFFFFFFF",
+                    "isFilled": true
+                },
+                "status": "active",
+                "widgets": [
+                    {
+                        "content": {
+                            "params": {
+                                "fillBorderRadius": 5,
+                                "fillColor": {
+                                    "fileId": "649bcacc9b8b44c393cca929",
+                                    "type": "image",
+                                    "value": "https://storysdk.s3.eu-north-1.amazonaws.com/6445b63f78c2fc786172612d/1687931595570.webp"
+                                },
+                                "fillOpacity": 100,
+                                "hasBorder": false,
+                                "strokeColor": {
+                                    "type": "color",
+                                    "value": "#FFFFFF"
+                                },
+                                "strokeOpacity": 100,
+                                "strokeThickness": 3,
+                                "widgetOpacity": 100
+                            },
+                            "type": "rectangle"
+                        },
+                        "id": "-1_BqbRlFbBqfUynEL0AP",
+                        "position": {
+                            "height": 1104,
+                            "origin": {
+                                "height": 1104,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 228
+                            },
+                            "realHeight": 1104,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 228
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "actionType": "link",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#FD19CC"
+                                },
+                                "borderColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "borderOpacity": 100,
+                                "borderRadius": 36,
+                                "borderWidth": 6,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "hasBorder": false,
+                                "hasIcon": false,
+                                "icon": {
+                                    "name": "ShareLineIcon"
+                                },
+                                "iconSize": 64,
+                                "opacity": 100,
+                                "storyId": "649bc9359b8b44c393cca927",
+                                "text": "Я готов",
+                                "url": "showAddTokenDialog"
+                            },
+                            "type": "click_me",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688363264131.webp"
+                        },
+                        "id": "R9tvh3JQ8Qr8lTtzjhW-g",
+                        "position": {
+                            "height": 144,
+                            "origin": {
+                                "height": 144,
+                                "width": 900,
+                                "x": 90,
+                                "y": 2104
+                            },
+                            "realHeight": 144,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 2104
+                        },
+                        "positionLimits": {
+                            "isResizableX": true,
+                            "isResizableY": true,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#18182EFF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 700
+                                },
+                                "fontSize": 72,
+                                "opacity": 100,
+                                "text": "Player for stories\n\n",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1687931812172.webp"
+                        },
+                        "id": "5tSefsXwq_-mQuka-IONY",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 108,
+                                "width": 1080,
+                                "x": 0,
+                                "y": 1738
+                            },
+                            "realHeight": 108,
+                            "realWidth": 1080,
+                            "rotate": 0,
+                            "width": 1080,
+                            "x": 0,
+                            "y": 1738
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    },
+                    {
+                        "content": {
+                            "params": {
+                                "align": "center",
+                                "backgroundColor": {
+                                    "type": "color",
+                                    "value": "#ffffff"
+                                },
+                                "backgroundOpacity": 100,
+                                "color": {
+                                    "type": "color",
+                                    "value": "#A49BA4FF"
+                                },
+                                "fontFamily": "San Francisco",
+                                "fontParams": {
+                                    "style": "normal",
+                                    "weight": 500
+                                },
+                                "fontSize": 51,
+                                "opacity": 100,
+                                "text": "You can test all widgets, video, images and text",
+                                "widgetOpacity": 100,
+                                "withFill": false
+                            },
+                            "type": "text",
+                            "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1687930612250.webp"
+                        },
+                        "id": "OXmuD0k4QH6kwYniMuPms",
+                        "position": {
+                            "height": 75,
+                            "origin": {
+                                "height": 153,
+                                "width": 900,
+                                "x": 90,
+                                "y": 1882
+                            },
+                            "realHeight": 153,
+                            "realWidth": 900,
+                            "rotate": 0,
+                            "width": 900,
+                            "x": 90,
+                            "y": 1882
+                        },
+                        "positionLimits": {
+                            "isAutoHeight": true,
+                            "isResizableX": true,
+                            "isResizableY": false,
+                            "isRotatable": true
+                        }
+                    }
+                ],
+                "is_hidden": false,
+                "start_time": "2023-06-28T05:52:57.295Z",
+                "end_time": null
+            },
+            "layer_data": {
+                "layersGroupId": "SxoVk3dXVr9Yga9ieZ2hI",
+                "positionInGroup": 1,
+                "score": {
+                    "letter": "A",
+                    "points": 0
+                },
+                "isDefaultLayer": true
+            },
+            "created_at": "2023-06-28T05:52:57.519Z",
+            "updated_at": "2023-07-03T05:47:44.555Z"
+        }
+    ]
+}

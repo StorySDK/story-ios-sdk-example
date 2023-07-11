@@ -1,0 +1,140 @@
+{
+    "error": "",
+    "data": {
+        "id": "6445b6654bcdc7210eda111f",
+        "user_id": "6445b63f78c2fc786172612d",
+        "title": "prod-app-for-test",
+        "ios_app_id": "",
+        "android_app_id": "",
+        "share": false,
+        "sdk_token": "f32922c1-64e6-4ad4-ba5e-520ee77368c4",
+        "setting_ios": {},
+        "setting_android": {},
+        "settings": {
+            "groupView": {
+                "ios": "circle",
+                "android": "circle",
+                "react": "circle",
+                "web": "circle"
+            },
+            "defaultWidgetsContent": {
+                "rectangle": {
+                    "type": "rectangle",
+                    "params": {
+                        "fillColor": {
+                            "type": "image",
+                            "value": "https://storysdk.s3.eu-north-1.amazonaws.com/6445b63f78c2fc786172612d/1688895862240.webp",
+                            "fileId": "64aa81777f621abf3a9ee8b1"
+                        },
+                        "fillBorderRadius": 5,
+                        "widgetOpacity": 100,
+                        "fillOpacity": 100,
+                        "strokeThickness": 3,
+                        "strokeColor": {
+                            "type": "color",
+                            "value": "#FFFFFF"
+                        },
+                        "strokeOpacity": 100,
+                        "hasBorder": false
+                    }
+                },
+                "text": {
+                    "params": {
+                        "align": "center",
+                        "backgroundColor": {
+                            "type": "color",
+                            "value": "#ffffff"
+                        },
+                        "backgroundOpacity": 100,
+                        "color": {
+                            "type": "color",
+                            "value": "#18182EFF"
+                        },
+                        "fontFamily": "San Francisco",
+                        "fontParams": {
+                            "style": "normal",
+                            "weight": 700
+                        },
+                        "fontSize": 72,
+                        "opacity": 100,
+                        "text": "Превью для StorySDK",
+                        "widgetOpacity": 100,
+                        "withFill": false
+                    },
+                    "type": "text",
+                    "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688362360251.webp"
+                },
+                "click_me": {
+                    "params": {
+                        "actionType": "story",
+                        "backgroundColor": {
+                            "type": "color",
+                            "value": "#962D77FF"
+                        },
+                        "borderColor": {
+                            "type": "color",
+                            "value": "#ffffff"
+                        },
+                        "borderOpacity": 100,
+                        "borderRadius": 36,
+                        "borderWidth": 6,
+                        "color": {
+                            "type": "color",
+                            "value": "#FFFFFFFF"
+                        },
+                        "fontFamily": "San Francisco",
+                        "fontParams": {
+                            "style": "normal",
+                            "weight": 500
+                        },
+                        "fontSize": 68,
+                        "hasBorder": false,
+                        "hasIcon": false,
+                        "icon": {
+                            "name": "ShareLineIcon"
+                        },
+                        "iconSize": 64,
+                        "opacity": 100,
+                        "storyId": "ZVCaTO1W_dQgiQDP5zUFW",
+                        "text": "Tap me ",
+                        "url": "showAddTokenDialog"
+                    },
+                    "type": "click_me",
+                    "widgetImage": "https://storysdk.s3.eu-north-1.amazonaws.com/html2image/1688362789152.webp"
+                }
+            },
+            "fonts": [
+                {
+                    "family": "Sanchez",
+                    "variants": [
+                        "regular",
+                        "italic"
+                    ],
+                    "subsets": [
+                        "latin",
+                        "latin-ext"
+                    ],
+                    "version": "v13",
+                    "lastModified": "2022-09-22",
+                    "files": {
+                        "regular": "http://fonts.gstatic.com/s/sanchez/v13/Ycm2sZJORluHnXbITm5b_BwE1l0.ttf",
+                        "italic": "http://fonts.gstatic.com/s/sanchez/v13/Ycm0sZJORluHnXbIfmxR-D4Bxl3gkw.ttf"
+                    },
+                    "category": "serif",
+                    "kind": "webfonts#webfont",
+                    "menu": "http://fonts.gstatic.com/s/sanchez/v13/Ycm2sZJORluHnXbIfm9R-A.ttf"
+                }
+            ],
+            "isShowMockup": false
+        },
+        "localization": {
+            "default": "en",
+            "languages": [
+                "en",
+                "ru"
+            ]
+        },
+        "created_at": "2023-04-23T22:51:17.835Z",
+        "updated_at": "2023-07-09T11:45:07.907Z"
+    }
+}
