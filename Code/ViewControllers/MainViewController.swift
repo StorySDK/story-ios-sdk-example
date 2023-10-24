@@ -63,6 +63,10 @@ final class TitleNavView: UIView {
 }
 
 class MainViewController: UIViewController, SRStoryWidgetDelegate {
+    func onWidgetGroupClose() {
+        //
+    }
+    
     func onWidgetMethodCall(_ selectorName: String?) {
         
     }

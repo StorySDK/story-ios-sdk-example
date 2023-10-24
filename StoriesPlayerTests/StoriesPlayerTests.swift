@@ -10,6 +10,10 @@ import StorySDK
 @testable import StoriesPlayer
 
 class StoriesPlayerTests: XCTestCase, SRStoryWidgetDelegate {
+    func onWidgetGroupClose() {
+        //
+    }
+    
     private let apiKey = AppConfig.defaultAppAPIKey
     private let storyWidget = SRStoryWidget()
     private var expectation: XCTestExpectation?

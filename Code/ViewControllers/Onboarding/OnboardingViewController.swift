@@ -80,6 +80,10 @@ extension OnboardingViewController: SettingsModelDelegate {
 }
 
 extension OnboardingViewController: SRStoryWidgetDelegate {
+    func onWidgetGroupClose() {
+        //
+    }
+    
     func onWidgetErrorReceived(_ error: Error, widget: SRStoryWidget) {
         print(error)
     }
