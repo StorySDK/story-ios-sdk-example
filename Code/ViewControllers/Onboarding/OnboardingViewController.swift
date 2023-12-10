@@ -39,7 +39,7 @@ final class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .blue
         widget.isHidden = true
         
         setupLayout()
@@ -53,11 +53,16 @@ final class OnboardingViewController: UIViewController {
         startNow()
     }
     
+    // selector for custom action from onboarding
+    @objc func openApp() {
+        startNow()
+    }
+    
     private func setupLayout() {
         view.addMultipleSubviews(with: [widget])
         
         widget.snp.remakeConstraints {
-            $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.top.equalTo(view)
         }
     }
 }

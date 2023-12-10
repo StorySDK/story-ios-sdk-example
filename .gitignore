@@ -31,3 +31,6 @@ DerivedData
 
 Carthage/Build
 Example/Pods
+
+# Auto preparing of onboarding resources
+OnboardingPreparation/*

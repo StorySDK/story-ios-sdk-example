@@ -169,7 +169,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         view.addMultipleSubviews(with: [widget])
         
         widget.snp.remakeConstraints {
-            $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.top.equalTo(view)
         }
     }
 }
