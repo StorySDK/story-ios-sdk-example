@@ -105,6 +105,11 @@ extension OnboardingViewController: SRStoryWidgetDelegate {
         storiesModel?.openAsOnboarding(groupId: AppConfig.onboardingGroup)
     }
     
+    @objc private func dismiss() {
+        coordinator?.openMain()
+        dismiss(animated: true)
+    }
+    
     func onWidgetMethodCall(_ selectorName: String?) {
         guard let selectorName = selectorName else { return }
         

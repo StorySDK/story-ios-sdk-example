@@ -189,6 +189,6 @@ extension MainViewController: SettingsModelDelegate {
         guard let project = project else { return }
         
         titleView.title = project.projectName
-        storiesModel?.apiKey = project.apiKey
+        storiesModel = StoriesPlayerModel(apiKey: project.apiKey)
     }
 }
