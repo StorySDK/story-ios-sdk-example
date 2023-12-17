@@ -42,6 +42,7 @@
 		8DB376552A02F581007CC68C /* StoriesPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB376532A02F581007CC68C /* StoriesPlayerUITests.swift */; };
 		8DB376562A02F581007CC68C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DB376542A02F581007CC68C /* Info.plist */; };
 		8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFCFC6029F1DF2E0033F4D1 /* SnapKit */; };
+		944B99F02B2FB636008F6325 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 944B99EF2B2FB636008F6325 /* StorySDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 				57A319E72A670EEA004B98B5 /* StorySDK in Frameworks */,
 				8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */,
 				57C2B8072A37A6EF00348F87 /* AVFoundation.framework in Frameworks */,
+				944B99F02B2FB636008F6325 /* StorySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +334,7 @@
 			packageProductDependencies = (
 				8DFCFC6029F1DF2E0033F4D1 /* SnapKit */,
 				57A319E62A670EEA004B98B5 /* StorySDK */,
+				944B99EF2B2FB636008F6325 /* StorySDK */,
 			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* StoriesPlayer.app */;
@@ -408,6 +411,7 @@
 			mainGroup = 3775360722234238005EE5FE;
 			packageReferences = (
 				8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */,
 			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
@@ -673,7 +677,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 37;
-				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -681,7 +684,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.softeam.storiesplayer.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.storysdk.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STAGE";
 				SWIFT_VERSION = 5.0;
@@ -695,7 +698,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 37;
-				DEVELOPMENT_TEAM = QQC7SML9L4;
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -703,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.softeam.storiesplayer.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.storysdk.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
 				SWIFT_VERSION = 5.0;
@@ -839,6 +841,14 @@
 				version = 5.6.0;
 			};
 		};
+		944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StorySDK/story-ios-sdk";
+			requirement = {
+				branch = dev;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -850,6 +860,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		944B99EF2B2FB636008F6325 /* StorySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */;
+			productName = StorySDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
