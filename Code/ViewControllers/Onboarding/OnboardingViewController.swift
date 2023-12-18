@@ -39,7 +39,6 @@ final class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         widget.isHidden = true
         
         setupLayout()
