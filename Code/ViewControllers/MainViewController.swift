@@ -169,7 +169,7 @@ class MainViewController: UIViewController, SRStoryWidgetDelegate {
         view.addMultipleSubviews(with: [widget])
         
         widget.snp.remakeConstraints {
-            $0.leading.trailing.top.equalTo(view)
+            $0.leading.trailing.top.equalTo(view.safeAreaLayoutGuide)
         }
     }
 }
@@ -190,5 +190,9 @@ extension MainViewController: SettingsModelDelegate {
         
         titleView.title = project.projectName
         storiesModel = StoriesPlayerModel(apiKey: project.apiKey)
+        
+        widget.delegate = self
+        storiesModel?.setup(widget: widget)
+        reloadApp()
     }
 }
