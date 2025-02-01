@@ -92,7 +92,8 @@ final class AppCoordinator: AppCoordinatorProtocol {
     
     func openStories(index: Int, groups: [SRStoryGroup], in vc: UIViewController,
                      delegate: SRStoryWidgetDelegate?, animated: Bool) {
-        let controller = SRNavigationController(index: index, groups: groups)
+        let controller = SRNavigationController(index: index, groups: groups,
+                                                backgroundColor: UIColor.rgba(0x03050EFF))
         vc.present(controller, animated: animated)
     }
     

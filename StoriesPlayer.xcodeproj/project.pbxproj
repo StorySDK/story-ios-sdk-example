@@ -10,8 +10,9 @@
 		3775361422234238005EE5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775361322234238005EE5FE /* AppDelegate.swift */; };
 		3775361B22234238005EE5FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3775361A22234238005EE5FE /* Assets.xcassets */; };
 		3775361E22234238005EE5FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3775361C22234238005EE5FE /* LaunchScreen.storyboard */; };
+		570F7D752C72A4E0008457DB /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 570F7D742C72A4E0008457DB /* StorySDK */; settings = {ATTRIBUTES = (Required, ); }; };
 		5777BD802A10EC32002601AE /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5777BD7F2A10EC32002601AE /* AppConfig.swift */; };
-		57A319E72A670EEA004B98B5 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 57A319E62A670EEA004B98B5 /* StorySDK */; };
+		5793D9732C802E9700EE585D /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 5793D9722C802E9700EE585D /* StorySDK */; };
 		57A369832A353CF900FBBD38 /* ChooseProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A369822A353CF900FBBD38 /* ChooseProjectViewController.swift */; };
 		57A369862A353E4000FBBD38 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A369852A353E4000FBBD38 /* AppCoordinator.swift */; };
 		57A3698D2A35CB9500FBBD38 /* ProjectSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3698C2A35CB9500FBBD38 /* ProjectSettingsViewController.swift */; };
@@ -23,6 +24,7 @@
 		57A369992A37657A00FBBD38 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A369982A37657A00FBBD38 /* Palette.swift */; };
 		57A3699D2A3766CB00FBBD38 /* UIColor+AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3699C2A3766CB00FBBD38 /* UIColor+AppColor.swift */; };
 		57A3699F2A37892F00FBBD38 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A3699E2A37892F00FBBD38 /* SettingsTableView.swift */; };
+		57AD8B2B2C67DD6D001DC923 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AD8B2A2C67DD6D001DC923 /* UIColor+Extension.swift */; };
 		57C2B8022A37A0D500348F87 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8012A37A0D500348F87 /* ScanQRViewController.swift */; };
 		57C2B8052A37A15600348F87 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C2B8042A37A15600348F87 /* ScanQRView.swift */; };
 		57C2B8072A37A6EF00348F87 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C2B8062A37A6EF00348F87 /* AVFoundation.framework */; };
@@ -36,7 +38,6 @@
 		8DB376552A02F581007CC68C /* StoriesPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB376532A02F581007CC68C /* StoriesPlayerUITests.swift */; };
 		8DB376562A02F581007CC68C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DB376542A02F581007CC68C /* Info.plist */; };
 		8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DFCFC6029F1DF2E0033F4D1 /* SnapKit */; };
-		944B99F02B2FB636008F6325 /* StorySDK in Frameworks */ = {isa = PBXBuildFile; productRef = 944B99EF2B2FB636008F6325 /* StorySDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,11 +77,11 @@
 		57A369982A37657A00FBBD38 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		57A3699C2A3766CB00FBBD38 /* UIColor+AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppColor.swift"; sourceTree = "<group>"; };
 		57A3699E2A37892F00FBBD38 /* SettingsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableView.swift; sourceTree = "<group>"; };
+		57AD8B2A2C67DD6D001DC923 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		57C2B8012A37A0D500348F87 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
 		57C2B8042A37A15600348F87 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		57C2B8062A37A6EF00348F87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		57C2B8092A37C36F00348F87 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		57C47BEA2A670E9F00DE5EF3 /* story-ios-sdk */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "story-ios-sdk"; path = "../story-ios-sdk"; sourceTree = "<group>"; };
 		57C5FD9D2A5ABEED00805A8D /* SRQRCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRQRCodeModel.swift; sourceTree = "<group>"; };
 		8D356C7829E16A1800B08643 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8D84A6CA29F1DA2D0024C58D /* StoriesPlayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesPlayerModel.swift; sourceTree = "<group>"; };
@@ -97,10 +98,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A319E72A670EEA004B98B5 /* StorySDK in Frameworks */,
+				570F7D752C72A4E0008457DB /* StorySDK in Frameworks */,
 				8DFCFC6129F1DF2E0033F4D1 /* SnapKit in Frameworks */,
 				57C2B8072A37A6EF00348F87 /* AVFoundation.framework in Frameworks */,
-				944B99F02B2FB636008F6325 /* StorySDK in Frameworks */,
+				5793D9732C802E9700EE585D /* StorySDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +153,6 @@
 				8DB3764029FF073B007CC68C /* Extension */,
 				8D84A6C929F1DA2D0024C58D /* Model */,
 				8D356C7729E169F900B08643 /* ViewControllers */,
-				57AD32A02A5B530D003C19CD /* Resources */,
 				3775361322234238005EE5FE /* AppDelegate.swift */,
 				3775361A22234238005EE5FE /* Assets.xcassets */,
 				3775361C22234238005EE5FE /* LaunchScreen.storyboard */,
@@ -206,13 +206,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		57AD32A02A5B530D003C19CD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		57C2B8032A37A14800348F87 /* ScanQR */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +240,6 @@
 		8D356C7C29E16B4B00B08643 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				57C47BEA2A670E9F00DE5EF3 /* story-ios-sdk */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -274,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB3764129FF075C007CC68C /* UIView+Extension.swift */,
+				57AD8B2A2C67DD6D001DC923 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -315,8 +308,8 @@
 			name = StoriesPlayer;
 			packageProductDependencies = (
 				8DFCFC6029F1DF2E0033F4D1 /* SnapKit */,
-				57A319E62A670EEA004B98B5 /* StorySDK */,
-				944B99EF2B2FB636008F6325 /* StorySDK */,
+				570F7D742C72A4E0008457DB /* StorySDK */,
+				5793D9722C802E9700EE585D /* StorySDK */,
 			);
 			productName = iOSTemplate;
 			productReference = 3775361022234238005EE5FE /* StoriesPlayer.app */;
@@ -393,7 +386,7 @@
 			mainGroup = 3775360722234238005EE5FE;
 			packageReferences = (
 				8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */,
+				5793D9712C802E9700EE585D /* XCRemoteSwiftPackageReference "story-ios-sdk" */,
 			);
 			productRefGroup = 3775361122234238005EE5FE /* Products */;
 			projectDirPath = "";
@@ -463,6 +456,7 @@
 				57A369912A35D12C00FBBD38 /* SettingsView.swift in Sources */,
 				57A369832A353CF900FBBD38 /* ChooseProjectViewController.swift in Sources */,
 				57A369952A3760F300FBBD38 /* SettingsModel.swift in Sources */,
+				57AD8B2B2C67DD6D001DC923 /* UIColor+Extension.swift in Sources */,
 				8DB3764229FF075C007CC68C /* UIView+Extension.swift in Sources */,
 				57A369862A353E4000FBBD38 /* AppCoordinator.swift in Sources */,
 				57C2B8052A37A15600348F87 /* ScanQRView.swift in Sources */,
@@ -651,9 +645,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
-				DEVELOPMENT_TEAM = FXW2DCUD22;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 38;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -664,6 +658,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.storysdk.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STAGE";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -674,9 +669,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 37;
-				DEVELOPMENT_TEAM = FXW2DCUD22;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 38;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Code/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -687,6 +682,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.storysdk.player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGE;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -813,6 +809,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5793D9712C802E9700EE585D /* XCRemoteSwiftPackageReference "story-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StorySDK/story-ios-sdk.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.9.12;
+			};
+		};
 		8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -821,30 +825,22 @@
 				version = 5.6.0;
 			};
 		};
-		944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/StorySDK/story-ios-sdk";
-			requirement = {
-				branch = dev;
-				kind = branch;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		57A319E62A670EEA004B98B5 /* StorySDK */ = {
+		570F7D742C72A4E0008457DB /* StorySDK */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = StorySDK;
+		};
+		5793D9722C802E9700EE585D /* StorySDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5793D9712C802E9700EE585D /* XCRemoteSwiftPackageReference "story-ios-sdk" */;
 			productName = StorySDK;
 		};
 		8DFCFC6029F1DF2E0033F4D1 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8DFCFC5F29F1DF2E0033F4D1 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		944B99EF2B2FB636008F6325 /* StorySDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 944B99EE2B2FB636008F6325 /* XCRemoteSwiftPackageReference "story-ios-sdk" */;
-			productName = StorySDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

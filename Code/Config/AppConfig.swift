@@ -11,6 +11,6 @@ import StorySDK
 struct AppConfig {
     static let storySdkAPIUrl = "https://api.storysdk.com/sdk/v1/"
     
-    static let defaultAppAPIKey = "ba08de07-3135-40df-9660-99c65d1bc34d"
-    static let onboardingGroup = "657fbda7c2023b145ea67e01"
+    static let defaultAppAPIKey = "c3ca6b55-3c1b-45cf-b26d-3785bbb17828"
+    static let onboardingGroup = "66c27322a6811b73849f34e4"
 }

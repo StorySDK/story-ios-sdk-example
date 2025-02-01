@@ -1,4 +1,5 @@
 {
+  "originHash" : "1699653da7e5f9d409bc8ffb7b486dfc2d180679889d5f29e209d7f73d030be1",
   "pins" : [
     {
       "identity" : "snapkit",
@@ -12,12 +13,12 @@
     {
       "identity" : "story-ios-sdk",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/StorySDK/story-ios-sdk",
+      "location" : "https://github.com/StorySDK/story-ios-sdk.git",
       "state" : {
-        "branch" : "dev",
-        "revision" : "bc0166aef23d8da2eb919f61452cff0e64e01e41"
+        "revision" : "c05ded84164fe80a09bb4aed32bcea43994f0ef2",
+        "version" : "0.9.12"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
